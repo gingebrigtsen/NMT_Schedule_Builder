@@ -1,0 +1,33 @@
+Front:
+1. Fix dependency/memory issues
+2. Occupancy & Waitlist display in course lookup
+2. 0000 level courses
+9. fix lookup step numbers
+8. mention march campus survey data
+10. landing page directions/syntax
+3. General style and theme
+4. add hours slots at eod
+5. switch to 30m intervals
+7. add to cart button opens cart to show current status
+6. time conflict in cart modal
+PAGES: [Report, About, Help, 404, Index, Calendar, ]
+COMPONENTS: [Header, Footer, ]
+
+
+Back:
+1. Fix dependency/memory issues
+2. Update scraping to generate catalog URLs
+3. Update scraping to regularly recollect p_subj as well as p_term
+3. Update scraping to wrap every cell in doublequotes ""
+BRANCHES: [MODELS, ]
+
+
+Endgame:
+1. Report template
+2. Project Introduction
+3. Project Purpose
+4. Project Planning
+5. Project Stack Breakdown
+6. Issues During Development
+7. Overcoming Development Issues
+8. Conclusions and Final Thoughts (Mostly Done)
