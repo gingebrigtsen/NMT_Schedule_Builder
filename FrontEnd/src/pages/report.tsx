@@ -32,6 +32,45 @@ const head = {
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Report: FunctionComponent = () => {
+  // handling sending form data to the backend for email submission
+  const handleFormSubmit = () => {
+    const email = document.querySelector('reportEmail').value; // get email from input
+    const message = document.querySelector('reportMessage').value; //get msg from input
+    const subject = 'NMT Schedule Builder -- Issue Report'; // msg subject
+
+    // data structure to send to backend
+    const data = {
+      email,
+      message,
+      subject,
+    };
+
+    // Making POST request to backend
+    fetch('http://localhost:5000/submit_form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      // Managing responses
+      .then(response => {
+        if (response.ok) {
+          alert('Report Form Submitted Successfully!');
+        } else {
+          alert(
+            'Report Form Submission Failed Unexexpectedly with status ${response.status}'
+          );
+        }
+      })
+
+      // Managing errors
+      .catch(error => {
+        console.error('Report Form Submission Error:', error);
+        alert('Form Submission Failed With ${error}');
+      });
+  };
+
   return (
     <>
       <Head>
@@ -98,6 +137,7 @@ const Report: FunctionComponent = () => {
                 name="Email"
                 aria-label="user@example.com"
                 placeholder="user@example.com"
+                id="reportEmail"
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>
@@ -112,6 +152,7 @@ const Report: FunctionComponent = () => {
                 name="Message"
                 aria-label="Questions, Comments, Concerns?"
                 placeholder="Questions, Comments, Concerns?"
+                id="reportMessage"
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>
@@ -122,8 +163,12 @@ const Report: FunctionComponent = () => {
             <EuiFlexItem></EuiFlexItem>
             <EuiFlexItem></EuiFlexItem>
             <EuiFlexItem>
-              <EuiButton size="s" color="primary" iconType="arrowRight">
-                Send
+              <EuiButton
+                size="s"
+                color="primary"
+                iconType="arrowRight"
+                onClick={handleFormSubmit}>
+                Send Report
               </EuiButton>
             </EuiFlexItem>
           </EuiFlexGroup>

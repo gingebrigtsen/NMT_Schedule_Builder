@@ -32,6 +32,11 @@ const head = {
 const title = {
   lineHeight: '1.75',
 };
+// vertical lines for better readability
+const vert = {
+  borderLeft: '1px solid #666666',
+  margin: 'auto 8px',
+};
 
 // --------
 
@@ -268,6 +273,48 @@ const Lookup: FunctionComponent = () => {
     },
   ]);
 
+  // tracking search bar contents
+  const [query, setQuery] = useState('');
+  // update query state when something is typed in
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  // defining inter-component results data structure
+  const [data, setData] = useState([]);
+  // On form submission, package data for backend to run search
+  const handleSearchSubmit = () => {
+    // create data object of search query and selected options
+    const data = {
+      query: query,
+      terms: terms.filter(option => option.checked),
+      subjects: subjects.filter(option => option.checked),
+      levels: levels.filter(option => option.checked),
+    };
+
+    // Making a POST to the backend
+    fetch('http://localhost:5000/serve_query', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      // Managing responses (search results or errors)
+      .then(response => response.json())
+      .then(data => {
+        // debugging purposes
+        console.log('Search results:', data);
+        // updating data state with search results
+        setData(data)
+      })
+
+      // catching errors and logging to console
+      .catch(error => {
+        console.error('Error searching:', error);
+      });
+  };
+
   // building page content
   return (
     <>
@@ -303,9 +350,8 @@ const Lookup: FunctionComponent = () => {
             <EuiText textAlign="right">
               <h3>Create your schedule</h3>
               <p>
-                Add courses to your cart to keep track of them, add them to your
-                calendar, watch for time conflicts, and to be able to export to
-                Google, Apple, and Banweb.
+                Add courses to your cart to keep track of them, and track them
+                on your calendar -- lookout for time conflicts.
               </p>
             </EuiText>
           </EuiFlexItem>
@@ -318,35 +364,16 @@ const Lookup: FunctionComponent = () => {
         </EuiText>
         <EuiSpacer size="m" />
 
-        <EuiFlexGroup justifyContent="spaceBetween">
-          <EuiFlexItem>
-            <EuiText>
-              <h4 style={{ color: '#0079A5' }}>
-                Step #1: Start Anywhere<strong>&#8594;</strong>
-              </h4>
-            </EuiText>
-          </EuiFlexItem>
-
-          {/* general global searching search */}
-          <EuiFlexItem>
-            <EuiFieldSearch
-              placeholder="Search for Anything..."
-              aria-label="Search"
-            />
-          </EuiFlexItem>
-          <EuiFlexItem></EuiFlexItem>
-        </EuiFlexGroup>
+        {/* Search option 1: selectables */}
         <EuiText>
-          <EuiText>
-            <h4 style={{ color: '#0079A5' }}>
-              Step #2: Refine Your Search with More Options
-              <strong>&#8628;</strong>
-            </h4>
-          </EuiText>
+          <h4 style={{ color: '#0079A5' }}>
+            Search Option 1 (Specify the Term, Subject, and Level) 
+            <strong>&#8628;</strong>
+          </h4>
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween" style={{ height: 200 }}>
           {/* term selection */}
-          <EuiFlexItem>
+          <EuiFlexItem style={vert}>
             <EuiTitle size="xxs" style={title}>
               <span>Term</span>
             </EuiTitle>
@@ -359,7 +386,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* dept selection */}
-          <EuiFlexItem>
+          <EuiFlexItem style={vert}>
             <EuiTitle size="xxs" style={title}>
               <span>Subject / Program</span>
             </EuiTitle>
@@ -372,7 +399,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* level selection */}
-          <EuiFlexItem>
+          <EuiFlexItem style={vert}>
             <EuiTitle size="xxs" style={title}>
               <span>Course Level</span>
             </EuiTitle>
@@ -385,6 +412,40 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
         </EuiFlexGroup>
 
+        {/* Search Option 2: term + general search */}
+        <EuiSpacer size="m" />
+        <EuiHorizontalRule margin="s" size="half" />
+        <EuiFlexGroup justifyContent="spaceBetween">
+          <EuiFlexItem>
+            <EuiText>
+              <h4 style={{ color: '#0079A5' }}>
+                Search Option 2 (Specify the term, & Search for a phrase over all course listings)<strong>&#8594;</strong>
+              </h4>
+            </EuiText>
+          </EuiFlexItem>
+
+          {/* term selection for option 2 */}
+          <EuiFlexItem style={vert}>
+            <EuiTitle size="xxs" style={title}>
+              <span>Term</span>
+            </EuiTitle>
+            <EuiSelectable
+              aria-label="termSelection"
+              options={terms}
+              onChange={newTerms => setTerms(newTerms)}>
+              {list => <>{list}</>}
+            </EuiSelectable>
+          </EuiFlexItem>
+
+          {/* general global searching search */}
+          <EuiFlexItem style={vert}>
+            <EuiFieldSearch
+              placeholder="Search for Anything..."
+              aria-label="Search"
+            />
+          </EuiFlexItem>
+        </EuiFlexGroup>
+
         {/* submit lookup form */}
         <EuiHorizontalRule margin="s" size="half" />
         <EuiSpacer size="m" />
@@ -392,12 +453,16 @@ const Lookup: FunctionComponent = () => {
           <EuiFlexItem>
             <EuiText>
               <h4 style={{ color: '#0079A5' }}>
-                Step #3: Submit Your Query<strong>&#8594;</strong>
+                Click search to get your results<strong>&#8594;</strong>
               </h4>
             </EuiText>
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiButton size="s" color="primary" iconType="search">
+            <EuiButton
+              size="s"
+              color="primary"
+              iconType="search"
+              onClick={handleSearchSubmit}>
               Search
             </EuiButton>
           </EuiFlexItem>
@@ -408,6 +473,11 @@ const Lookup: FunctionComponent = () => {
         {/* Section III: Search results table */}
         <EuiText textAlign="center">
           <h3>Your Results:</h3>
+        </EuiText>
+        <EuiText>
+          <h4 style={{ color: '#0079A5' }}>
+            Select your chosen courses using the checkboxes<strong>&#8594;</strong>
+          </h4>
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween">
           <EuiFlexItem>

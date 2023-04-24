@@ -2,7 +2,7 @@
 import sys, requests, json
 sys.path.append("..")
 from bs4 import BeautifulSoup
-from ParseData import parseData
+from .ParseData import parseData
 
 
 # Scraping Banweb Content
@@ -11,12 +11,12 @@ from ParseData import parseData
 # No returns, only file output
 def collectData():
     # configuration data
-    with open('conf.json', 'r') as config:
+    with open('./Models/conf.json', 'r') as config:
         conf = json.load(config)
 
     # iterating thru valid terms to collect data
     for term in conf['p_term']:
-        result = open("./csv/" + term[0] + ".csv", "w") # Open file io
+        result = open("./Models/csv/" + term[0] + ".csv", "w") # Open file io
         result.write(conf['csvHeader'] + "\n")
         for dept in conf['p_subj']:
             # Creating custom POST parameters to interact with Banweb
@@ -42,11 +42,8 @@ def collectData():
                     result.write(temp + "\n") # writing output
         result.close() # close file io
         # parsing generated csv file
-        parseData(("./csv/" + term[0] + ".csv"), ("./csv/" + term[0] + "P.csv"))
+        parseData(("./Models/csv/" + term[0] + ".csv"), ("./Models/csv/" + term[0] + "P.csv"))
 
 
-collectData()
-
-
-# DEBUG & Boilerplate
-sys.stderr = open('./misc/log', 'w')
+# DEBUG & Error Logging
+#sys.stderr = open('./Models/misc/log', 'a')

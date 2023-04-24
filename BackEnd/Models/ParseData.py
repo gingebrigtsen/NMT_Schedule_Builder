@@ -56,6 +56,5 @@ def parseData(src, dest):
         w.writerow(buf) # clear buffer
 
 
-# DEBUG & Boilerplate
-# writes errors and warnings to standalone log file
-sys.stderr = open('./misc/log', 'w')
+# DEBUG & Error Logging
+#sys.stderr = open('./Models/misc/log', 'a')

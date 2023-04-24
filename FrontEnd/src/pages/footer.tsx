@@ -15,7 +15,7 @@ import {
 const Footer: FunctionComponent = () => {
   return (
     <>
-      <EuiBottomBar position="sticky" bottom={0}>
+      <EuiBottomBar>
         <EuiFlexGroup justify="spaceBetween" alignItems="center">
           <EuiFlexItem grow={false}>
             {/* left side of the footer */}

@@ -33,78 +33,78 @@ const head = {
 // --------
 
 // Defining variables and managing data flow for displayed elements
-const initialData = [
-  {
-    CRN: 12345,
-    Course: 'DEPT 123',
-    Title: 'Introduction to Computer Science',
-    Instructor: 'Dr. Professor',
-    Days: 'M W F',
-    Time: '10:00-11:30',
-    Location: 'Smith Hall',
-    Catalog: 'https://catalog.nmt.edu/courses/DEPT123',
-    Enroll: '18',
-    Seats: '25',
-    Waitlist: '0',
-    isSelected: false,
-  },
-  {
-    CRN: 23456,
-    Course: 'DEPT 234',
-    Title: 'Introduction to Philosophy',
-    Instructor: 'Dr. Professor',
-    Days: 'T R',
-    Time: '13:00-14:30',
-    Location: 'Online',
-    Catalog: 'https://catalog.nmt.edu/courses/DEPT234',
-    Enroll: '26',
-    Seats: '40',
-    Waitlist: '0',
-    isSelected: false,
-  },
-  {
-    CRN: 34567,
-    Course: 'DEPT 345',
-    Title: 'Introduction to Psychology',
-    Instructor: 'Dr. Professor',
-    Days: 'M W',
-    Time: '08:00-09:30',
-    Location: 'Johnson Hall',
-    Catalog: 'https://catalog.nmt.edu/courses/DEPT345',
-    Enroll: '4',
-    Seats: '60',
-    Waitlist: '0',
-    isSelected: false,
-  },
-  {
-    CRN: 45678,
-    Course: 'DEPT 456',
-    Title: 'Introduction to Biology',
-    Instructor: 'Dr. Professor',
-    Days: 'T Th',
-    Time: '11:00-12:30',
-    Location: 'Science Building',
-    Catalog: 'https://catalog.nmt.edu/courses/DEPT456',
-    Enroll: '21',
-    Seats: '25',
-    Waitlist: '0',
-    isSelected: false,
-  },
-  {
-    CRN: 56789,
-    Course: 'DEPT 567',
-    Title: 'Introduction to Economics',
-    Instructor: 'Dr. Professor',
-    Days: 'M W F',
-    Time: '14:00-15:30',
-    Location: 'Business Building',
-    Catalog: 'https://catalog.nmt.edu/courses/DEPT567',
-    Enroll: '4',
-    Seats: '6',
-    Waitlist: '0',
-    isSelected: false,
-  },
-];
+// const initialData = [
+//   {
+//     CRN: 12345,
+//     Course: 'DEPT 123',
+//     Title: 'Introduction to Computer Science',
+//     Instructor: 'Dr. Professor',
+//     Days: 'M W F',
+//     Time: '10:00-11:30',
+//     Location: 'Smith Hall',
+//     Catalog: 'https://catalog.nmt.edu/courses/DEPT123',
+//     Enroll: '18',
+//     Seats: '25',
+//     Waitlist: '0',
+//     isSelected: false,
+//   },
+//   {
+//     CRN: 23456,
+//     Course: 'DEPT 234',
+//     Title: 'Introduction to Philosophy',
+//     Instructor: 'Dr. Professor',
+//     Days: 'T R',
+//     Time: '13:00-14:30',
+//     Location: 'Online',
+//     Catalog: 'https://catalog.nmt.edu/courses/DEPT234',
+//     Enroll: '26',
+//     Seats: '40',
+//     Waitlist: '0',
+//     isSelected: false,
+//   },
+//   {
+//     CRN: 34567,
+//     Course: 'DEPT 345',
+//     Title: 'Introduction to Psychology',
+//     Instructor: 'Dr. Professor',
+//     Days: 'M W',
+//     Time: '08:00-09:30',
+//     Location: 'Johnson Hall',
+//     Catalog: 'https://catalog.nmt.edu/courses/DEPT345',
+//     Enroll: '4',
+//     Seats: '60',
+//     Waitlist: '0',
+//     isSelected: false,
+//   },
+//   {
+//     CRN: 45678,
+//     Course: 'DEPT 456',
+//     Title: 'Introduction to Biology',
+//     Instructor: 'Dr. Professor',
+//     Days: 'T Th',
+//     Time: '11:00-12:30',
+//     Location: 'Science Building',
+//     Catalog: 'https://catalog.nmt.edu/courses/DEPT456',
+//     Enroll: '21',
+//     Seats: '25',
+//     Waitlist: '0',
+//     isSelected: false,
+//   },
+//   {
+//     CRN: 56789,
+//     Course: 'DEPT 567',
+//     Title: 'Introduction to Economics',
+//     Instructor: 'Dr. Professor',
+//     Days: 'M W F',
+//     Time: '14:00-15:30',
+//     Location: 'Business Building',
+//     Catalog: 'https://catalog.nmt.edu/courses/DEPT567',
+//     Enroll: '4',
+//     Seats: '6',
+//     Waitlist: '0',
+//     isSelected: false,
+//   },
+// ];
 
 // --------
 
@@ -114,6 +114,7 @@ const Result = () => {
   // cart modal control
   const [isModalVisible, setIsModalVisible] = useState(false);
   const closeModal = () => setIsModalVisible(false);
+  
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
   const [pageSize, setPageSize] = useState(5);
@@ -121,7 +122,7 @@ const Result = () => {
   const [sortDirection, setSortDirection] = useState('asc');
   const [pageOfItems, setPageOfItems] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState([]);
   const onTableChange = ({ page = {}, sort = {} }) => {
     const { index: pageIndex, size: pageSize } = page;
     const { field: sortField, direction: sortDirection } = sort;
@@ -129,6 +130,7 @@ const Result = () => {
     setPageSize(pageSize);
     setSortField(sortField);
     setSortDirection(sortDirection);
+    setData(pageOfItems);
   };
 
   // Managing checkbox selecting, starting by setting all to false
@@ -339,7 +341,7 @@ const Result = () => {
             {/* Directions Label */}
             <EuiText>
               <h4 style={{ color: '#0079A5' }}>
-                Step #4: Add Your Selections to Your Cart
+                Finally, add your selections to your cart
                 <strong>&#8594;</strong>
               </h4>
             </EuiText>

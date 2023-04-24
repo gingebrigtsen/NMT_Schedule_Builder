@@ -1,41 +1,21 @@
 // Data and Imports
+import useState from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
+// Defining user cart, populating with selected course data
+// const [cart, setCart] = useState([]);
+
 // --------
 
-// managing course data pulled from backend CSV as local json
+// static sample json
 const events = [
   {
-    title: 'IT 101',
-    start: '2023-04-04T09:00:00',
-    end: '2023-04-04T12:00:00',
-    details: [
-      'Intro to IT\n',
-      'Cramer Hall\n',
-      '9:00am - 12:00pm\n',
-      'Main Campus\n',
-      'Instructor Name',
-    ],
-  },
-  {
-    title: 'CHEM 123',
-    start: '2023-04-05T14:00:00',
-    end: '2023-04-05T16:00:00',
-    details: [
-      'Intro to Chem\n',
-      'Lopez Building\n',
-      '2:00pm - 4:00pm\n',
-      'Main Campus\n',
-      'Instructor Name',
-    ],
-  },
-  {
     title: 'PHYS 201',
-    start: '2023-04-06T10:00:00',
-    end: '2023-04-06T12:00:00',
+    start: '2023-04-24T10:00:00',
+    end: '2023-04-24T12:00:00',
     details: [
       'Physics II\n',
       'Workman Hall\n',
@@ -46,8 +26,8 @@ const events = [
   },
   {
     title: 'IT 101',
-    start: '2023-04-06T10:00:00',
-    end: '2023-04-06T11:30:00',
+    start: '2023-04-25T10:00:00',
+    end: '2023-04-25T11:30:00',
     details: [
       'Intro to IT\n',
       'Cramer Hall\n',
@@ -58,8 +38,8 @@ const events = [
   },
   {
     title: 'PHIL 101',
-    start: '2023-04-06T12:30:00',
-    end: '2023-04-06T13:30:00',
+    start: '2023-04-25T12:30:00',
+    end: '2023-04-25T13:30:00',
     details: [
       'Intro to Philosophy\n',
       'Jones Hall\n',

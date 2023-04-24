@@ -1,37 +1,7 @@
 # Imports and Data
-import datetime, fitz, json, re, requests, sys
+import datetime, json, re, requests, sys
 sys.path.append("..")
-import pandas as pd
 from bs4 import BeautifulSoup
-
-
-# WORK IN PROGRESS
-# Get single banweb entry from csv storage
-# takes CRN id, term parameters
-# returns json/dict course data
-def getById(id, term):
-    data = pd.read_csv("Models/"+term+".csv")
-    target = data.loc[data["CRN"] == id]
-    if len(target) == 0:
-        raise ValueError(f"No row found with CRN {id}.")
-    else:
-        return target.iloc[0].to_dict()
-    
-
-# Gets banweb data by query from csv
-# returns relevant course data
-def getByQuery(query, sortBy, order):
-    # Parse the CSV
-    with open('', 'r') as csv:
-        r = csv.DictReader(csv)
-        data = list(r)
-
-    # Filter, sort, and return relevant data
-    if query:
-        data = [d for d in data if query in d.values()]
-    data = sorted(data, key=lambda d: d[sortBy], reverse=order == 'desc')
-    return data
-# END WORK IN PROGRESS
 
 
 # SERVICES: backend functions
@@ -92,14 +62,5 @@ def dateCheck():
 # END SERVICES
 
 
-# DEBUG & Boilerplate
-sys.stderr = open('./misc/log', 'w')
-if len(sys.argv) >= 2:
-    method_name = sys.argv[1]
-    method = globals().get(method_name)
-    if callable(method):
-        method()
-    else:
-        print("Method not found")
-else:
-    print("No method name provided")
+# DEBUG & Error Logging
+sys.stderr = open('./Services/misc/log', 'a')

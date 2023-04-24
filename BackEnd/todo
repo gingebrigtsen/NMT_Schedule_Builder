@@ -1,17 +1,17 @@
 Frontend Steps:
-11. conflictFlag json integration
-PAGES: [Lookup]
+11. isSelected, conflictFlag data integration
+fix lookup layout
+PAGES: [LOOKUP]
 COMPONENTS: [Cal, Cart, Result]
 
 
 Backend Steps:
-4. Build Flask code to send session data from results, to cart, to calendar
-5. Build Flask code to make lookup properly pull CRN/conflictFlag from CSV
-6. Build Flask code to send 'report' forms via email to NMT
-BRANCHES: [APP, Services, Controllers]
+4. Flask route & code: usr sess data <=> results, cart, cal
+7. Flask route & code: copy selected CRNs to clipboard
+BRANCHES: [APP]
 
 
 Deployment / Endgame Steps:
-1. CONTAINERIZE
-2. COMPILE
-3. Implementation, Maintenance, Appendix
+0. Test/Debug EVERYTHING (again)
+1. COMPILE THEN CONTAINERIZE
+3. FINAL REPORT: Implementation, Maintenance, Appendix

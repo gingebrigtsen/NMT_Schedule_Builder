@@ -40,6 +40,28 @@ const title = {
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Calendar: FunctionComponent = () => {
+  // Defining user cart, populating with selected course data
+  const [cart, setCart] = useState([]);
+
+  const handleClick = async () => {
+    // Join the CRNs with whitespace separation for pasting into banweb
+    const formattedData = cart.map(item => item.CRN).join(' ');
+
+    try {
+      // Use Clipboard API to write text to clipboard
+      await navigator.clipboard.writeText(formattedData);
+
+      // Alert user of copy success
+      alert('Copy to Clipboard: Success');
+    } catch (error) {
+      // Alert user of copy failure
+      alert('Copy to Clipboard: Failed');
+    }
+
+    // Close the modal after the status alert
+    closeBanModal();
+  };
+
   // Using react state hooks to manage the modals
   const [isCalModalVisible, setIsCalModalVisible] = useState(false);
   const [isBanModalVisible, setIsBanModalVisible] = useState(false);
@@ -72,8 +94,7 @@ const Calendar: FunctionComponent = () => {
               <h3>Your Term Calendar</h3>
               <p>
                 View all your selected courses in an easy to read calendar
-                format! Easily identify time conflicts or other issues, and
-                easily export to online calendars
+                format! Easily identify time conflicts and other issues.
               </p>
             </EuiText>
           </EuiFlexItem>
@@ -93,8 +114,8 @@ const Calendar: FunctionComponent = () => {
               <h3>Keep on track</h3>
               <p>
                 Update your cart at any time to automatically update the
-                calendar here, and use the options below to control details and
-                exporting
+                calendar here, and use the buttons below to export your CRNs to
+                Banweb and register.
               </p>
             </EuiText>
           </EuiFlexItem>
@@ -157,13 +178,9 @@ const Calendar: FunctionComponent = () => {
                 <EuiModalBody>
                   <EuiText textAlign="center">
                     <h4>
-                      *The recommended way to save your calendar is to take a
-                      screenshot.
+                      The best way to save your calendar for later
+                      is to take a screenshot/snip of it.
                     </h4>
-                    <p>
-                      However, should you wish to use this calendar elsewhere
-                      online, you can export it using the button below.
-                    </p>
                   </EuiText>
                 </EuiModalBody>
                 <EuiModalFooter>
@@ -171,15 +188,9 @@ const Calendar: FunctionComponent = () => {
                     onClick={closeCalModal}
                     iconType="cross"
                     color="primary"
+                    size="s"
                     fill>
                     Close
-                  </EuiButton>
-
-                  <EuiButton
-                    href="./export"
-                    iconType="download"
-                    color="primary">
-                    Export
                   </EuiButton>
                 </EuiModalFooter>
               </EuiModal>
@@ -232,7 +243,10 @@ const Calendar: FunctionComponent = () => {
                     Close
                   </EuiButton>
 
-                  <EuiButton href="./export" iconType="save" color="primary">
+                  <EuiButton
+                    onClick={handleClick}
+                    iconType="save"
+                    color="primary">
                     Copy to Clipboard
                   </EuiButton>
                 </EuiModalFooter>
@@ -241,6 +255,9 @@ const Calendar: FunctionComponent = () => {
           </EuiFlexItem>
           <EuiFlexItem></EuiFlexItem>
         </EuiFlexGroup>
+        <EuiSpacer size="l" />
+        <EuiSpacer size="l" />
+        <EuiSpacer size="l" />
       </Wrapper>
     </>
   );
