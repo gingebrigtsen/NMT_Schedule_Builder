@@ -12,12 +12,20 @@ def psubj(raw):
     doc = BeautifulSoup(raw.content, "html5lib") # parse the page
     # extract subj codes from select element
     subjCodes = [[option.text, option['value']] for option in doc.select('select[name=p_subj] option')]
+    
     # update the json configuration file
     with open ('Models/conf.json', 'r') as fin:
         conf = json.load(fin)
     conf['p_subj'] = subjCodes
+    
+    # write the update back to the config
     with open ('Models/conf.json', 'w') as fout:
         json.dump(conf, fout)
+
+    # duplicate the updated config to the frontend
+    # so that lookup has updated terms and subj
+    with open ('../FrontEnd/public/conf.json', 'w') as foutFront:
+        json.dump(conf, foutFront)
 
 
 # Collecting new term codes from banweb
@@ -25,14 +33,30 @@ def psubj(raw):
 # No returns,  only file output
 def pterm(raw, term):
     doc = BeautifulSoup(raw.content, "html5lib") # parse using html5lib
+    
     # extract term codes from relevant years
     termCodes = [[option.text, option['value']] for option in doc.select('select[name=p_term] option') if str(term) in option.text]
+    
     # update the json configuration file
     with open('Models/conf.json', 'r') as fin:
         conf = json.load(fin)
-    conf['p_term'] += termCodes
-    with open('Models/conf.json', 'w') as fout:        
+
+    current_terms = {tuple(term) for term in conf['p_term']}  # Convert list of lists to set of tuples for easier handling
+
+    # ensure there are no duplicates and remove expired term codes
+    year = datetime.date.today().year
+    for t in termCodes:
+        if t not in current_terms and str(year - 1) not in t[0]:
+            current_terms.add(tuple(t))  # Add the new term
+
+    # update conf with the updated term codes
+    conf['p_term'] = [list(term) for term in current_terms]
+
+    # write the updated terms back to the config
+    with open('Models/conf.json', 'w') as fout:
         json.dump(conf, fout)
+
+    # update subject codes too (as applicable)
     psubj(raw)
 
 
@@ -49,7 +73,7 @@ def dateCheck():
     term_pattern = re.compile(term_regex) # compiling pattern for efficiency
 
     # Find pattern in site, extract and compare to today's date to determine
-    # whether or not to collect new term codes with pterm()
+    # whether or not to collect new term/subj with pterm()/psubj()
     for element in BeautifulSoup(raw.content, "html5lib").find_all():
         date_match = date_pattern.search(element.text)
         if date_match:

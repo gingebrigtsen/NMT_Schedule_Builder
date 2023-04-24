@@ -1,10 +1,11 @@
 # ---------------- Imports and Data
-import atexit, datetime, time, threading
+import atexit, time, threading
 from flask import Flask, session, request, jsonify
+from traceback import print_exc
 from flask import make_response
+from flask_cors import CORS
 import smtplib, json
 import pandas as pd
-from flask_cors import CORS, cross_origin
 from Models import CollectData
 from Services import requestService
 
@@ -15,7 +16,8 @@ from Services import requestService
 # Backend Config
 app = Flask(__name__)
 app.config["DEBUG"] = True
-CORS(app)
+# CORS Configuration
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
 # ---------------- ROUTES
@@ -31,92 +33,72 @@ def index():
 # collects and parses query from frontend lookup form
 # uses pandas to construct a response to the query
 # returns jsonify data for display in results table
-@app.route('/serve_query', methods=['POST'])
-@cross_origin(origins=['http://localhost:3000/lookup'])
+@app.route('/api/serve_query', methods=['POST', 'OPTIONS'])
 def serve_query():
-    # get query from request body
-    data = request.get_json()
+    try:
+        # Handle preflight requests
+        if request.method == 'OPTIONS':
+            response = make_response()
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            response.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            return response
 
-    # results data structure to be converted to json
-    results = []
+        # get query from request body
+        data = request.get_json()
 
-    # open and search CSV using pandas
-    # since CSVs are separated by term, go by selected term
-    # building query response
-    # Search Option 2
-    if isinstance(data['query'], str) and data['query'].strip():
-        # handling custom search inputs
+        # results data structure to be converted to json
+        results = []
 
-        # extracting entries matching user text query 
-        # from data, adding to results
-        query = data['query'].strip()
-        df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.contains(query).any(), axis=1)]
-
-        # add filtered data to search results
-        results += df_filtered.to_dict('records')
-     # Search option 1
-    else:
+        # open and search CSV using pandas
+        # since CSVs are separated by term, go by selected term
         # opening the proper csv by term selection
-        term = data['term']
+        term = data.get('term', 'Spring 2023')
         df_term = pd.read_csv(f'Models/csv/{term}P.csv')
 
-        # extract dept and lvl from Course column
-        df_term['Department'] = df_term['Course'].str.extract('([A-Z]+)')[0]
-        df_term['Lvl'] = df_term['Course'].str.extract('([0-9]+)')[0]
+        # building query response
+        # Search Option 2
+        if isinstance(data['query'], str) and data['query'].strip():
+            # handling custom search inputs
 
-        # filter data by selected subjects
-        selected_subjects = [option['label'].split()[1] 
-            for option in data['subjects'] if option.get('checked')]
-        df_filtered = df_term[df_term['Department'].isin(selected_subjects)]
+            # extracting entries matching user text query 
+            # from data, adding to results
+            query = data['query'].strip()
+            df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.contains(query).any(), axis=1)]
 
-        # filter data by selected levels
-        selected_levels = [option['label'].split()[0] 
-            for option in data['levels'] if option.get('checked')]
-        df_filtered = df_filtered[df_filtered['Lvl'].isin(selected_levels)]
+            # add filtered data to search results
+            results += df_filtered.to_dict('records')
+        # Search option 1
+        else:
+            # extract dept and lvl from Course column
+            df_term['Department'] = df_term['Course'].str.extract('([A-Z]+)')[0]
+            df_term['Lvl'] = df_term['Course'].str.extract('([0-9]+)')[0]
 
-        # remove temp dept and lvl columns
-        df_filtered = df_filtered.drop(['Department', 'Lvl'], axis=1)
+            # filter data by selected subjects
+            selected_subjects = [option['label'].split()[1] 
+                for option in data['subjects'] if option.get('checked')]
+            df_filtered = df_term[df_term['Department'].isin(selected_subjects)]
 
-        # add filtered data to search results
-        results += df_filtered.to_dict('records')
+            # filter data by selected levels
+            selected_levels = [option['label'].split()[0] 
+                for option in data['levels'] if option.get('checked')]
+            df_filtered = df_filtered[df_filtered['Lvl'].isin(selected_levels)]
 
-    # return the search results as JSON
-    response = make_response(jsonify(results))
-    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
-    return response
+            # remove temp dept and lvl columns
+            df_filtered = df_filtered.drop(['Department', 'Lvl'], axis=1)
 
+            # add filtered data to search results
+            results += df_filtered.to_dict('records')
 
-# Sending Issue Reporting Forms to NMT registrar
-# Collects and parses data from frontend report form
-# uses SMTP to construct and send a simple email containing form contents
-# returns http status code on success
-@app.route('/submit_form', methods=['POST'])
-@cross_origin(origins=['http://localhost:3000/report'])
-def submit_form():
-    # handling json information sent by report form
-    data = json.loads(request.data)
-    email = data['email']
-    message = data['message']
-    subject = data['subject']
-
-    # SMTP configuration
-    smtp_server = 'smtp.gmail.com'
-    smtp_port = 587
-    smtp_user = 'nmt.scheduler@gmail.com'
-    smtp_password = 'NMT/SeniorDesign2023'
-
-    # sending SMTP message
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        # initialize and login
-        server.starttls()
-        server.login(smtp_user, smtp_password)
-
-        # send mail
-        emailMessage = f'Subject: {subject}\n\n{message}\n\nFrom: {email}'
-        server.sendmail(smtp_user, 'gabriel.ingebrigtsen-leiker@student.nmt.edu', emailMessage)
-    
-    # return a response
-    return '', 204
+        # return the search results as JSON
+        response = make_response(jsonify(results))
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        return response
+    except Exception as e:
+        # debugging response data transferring
+        print("Error:", e)
+        print_exc() # exception traceback
+        return make_response(jsonify({"error": "An internal server error occurred"}), 500)
 
 
 # ---------------- METHODS

@@ -1,5 +1,5 @@
 // Data and Imports
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -33,42 +33,14 @@ const head = {
 // by returning a React component containing mostly EUI html
 const Report: FunctionComponent = () => {
   // handling sending form data to the backend for email submission
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const handleFormSubmit = () => {
-    const email = document.querySelector('reportEmail').value; // get email from input
-    const message = document.querySelector('reportMessage').value; //get msg from input
-    const subject = 'NMT Schedule Builder -- Issue Report'; // msg subject
-
-    // data structure to send to backend
-    const data = {
-      email,
-      message,
-      subject,
-    };
-
-    // Making POST request to backend
-    fetch('http://localhost:5000/submit_form', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      // Managing responses
-      .then(response => {
-        if (response.ok) {
-          alert('Report Form Submitted Successfully!');
-        } else {
-          alert(
-            'Report Form Submission Failed Unexexpectedly with status ${response.status}'
-          );
-        }
-      })
-
-      // Managing errors
-      .catch(error => {
-        console.error('Report Form Submission Error:', error);
-        alert('Form Submission Failed With ${error}');
-      });
+    const subject = 'NMT Schedule Builder -- Issue Report';
+    const body = encodeURIComponent(`${message}\n\nFrom: ${email}`);
+    window.location.href = `mailto:gabriel.ingebrigtsen-leiker@student.nmt.edu?subject=${encodeURIComponent(
+      subject
+    )}&body=${body}`;
   };
 
   return (
@@ -138,6 +110,8 @@ const Report: FunctionComponent = () => {
                 aria-label="user@example.com"
                 placeholder="user@example.com"
                 id="reportEmail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>
@@ -153,6 +127,8 @@ const Report: FunctionComponent = () => {
                 aria-label="Questions, Comments, Concerns?"
                 placeholder="Questions, Comments, Concerns?"
                 id="reportMessage"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>

@@ -381,3 +381,287 @@ KeyboardInterrupt
  * Debugger is active!
  * Debugger PIN: 150-637-474
 127.0.0.1 - - [23/Apr/2023 19:54:02] "OPTIONS /serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 20:07:36] "OPTIONS /serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 20:19:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Apr/2023 20:19:46] "OPTIONS /serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 20:29:31] "OPTIONS /serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 21:22:19] "OPTIONS /serve_query HTTP/1.1" 200 -
+ * Detected change in '/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py', reloading
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 157, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 21:32:51] "OPTIONS /serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [23/Apr/2023 21:32:51] "[35m[1mPOST /serve_query HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 70, in serve_query
+    term = data['term']
+KeyError: 'term'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 22:22:11] "OPTIONS /api/submit_form HTTP/1.1" 200 -
+127.0.0.1 - - [23/Apr/2023 22:22:12] "[35m[1mPOST /api/submit_form HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 128, in submit_form
+    server.login(smtp_user, smtp_password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials x12-20020a5e8f4c000000b007608af6dfb4sm2921497iop.31 - gsmtp')
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/bin/flask", line 8, in <module>
+    sys.exit(main())
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 1050, in main
+    cli.main()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/decorators.py", line 84, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 911, in run_command
+    raise e from None
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 897, in run_command
+    app = info.load_app()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 312, in load_app
+    app = locate_app(import_name, None, raise_if_not_found=False)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 218, in locate_app
+    __import__(module_name)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 22, in <module>
+    @app.route('/')
+NameError: name 'app' is not defined
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/bin/flask", line 8, in <module>
+    sys.exit(main())
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 1050, in main
+    cli.main()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/decorators.py", line 84, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 911, in run_command
+    raise e from None
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 897, in run_command
+    app = info.load_app()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 312, in load_app
+    app = locate_app(import_name, None, raise_if_not_found=False)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/cli.py", line 218, in locate_app
+    __import__(module_name)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 22, in <module>
+    @app.route('/')
+NameError: name 'app' is not defined
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 22:26:36] "OPTIONS /api/submit_form HTTP/1.1" 200 -
+127.0.0.1 - - [23/Apr/2023 22:26:38] "[35m[1mPOST /api/submit_form HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 129, in submit_form
+    server.login(smtp_user, smtp_password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials az23-20020a056638419700b0040fafd22779sm2963956jab.32 - gsmtp')
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-637-474
+127.0.0.1 - - [23/Apr/2023 22:37:36] "[35m[1mPOST /api/submit_form HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 129, in submit_form
+    server.login(smtp_user, smtp_password)
+  File "/usr/lib/python3.8/smtplib.py", line 743, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y10-20020a6bc40a000000b00763b158780asm1794063ioa.11 - gsmtp')
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 17:23:31] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+[2023-04-24 17:23:31,517] ERROR in app: Exception on /api/serve_query [POST]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 71, in serve_query
+    term = data['term']
+KeyError: 'term'
+127.0.0.1 - - [24/Apr/2023 17:23:31] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 17:36:26] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+[2023-04-24 17:36:26,423] ERROR in app: Exception on /api/serve_query [POST]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 68, in serve_query
+    term = data['term']
+KeyError: 'term'
+127.0.0.1 - - [24/Apr/2023 17:36:26] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 17:42:30] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+[2023-04-24 17:42:30,944] ERROR in app: Exception on /api/serve_query [POST]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 54, in serve_query
+    term = data['term']
+KeyError: 'term'
+127.0.0.1 - - [24/Apr/2023 17:42:30] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 17:51:26] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 56, in serve_query
+    term = data['term']
+KeyError: 'term'
+127.0.0.1 - - [24/Apr/2023 17:51:27] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -

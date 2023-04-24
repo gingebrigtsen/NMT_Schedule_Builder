@@ -1,17 +1,15 @@
 Frontend Steps:
 11. isSelected, conflictFlag data integration
-fix lookup layout
 PAGES: [LOOKUP]
 COMPONENTS: [Cal, Cart, Result]
 
 
 Backend Steps:
 4. Flask route & code: usr sess data <=> results, cart, cal
-7. Flask route & code: copy selected CRNs to clipboard
+7. Flask code: copy selected CRNs to clipboard
 BRANCHES: [APP]
 
 
 Deployment / Endgame Steps:
-0. Test/Debug EVERYTHING (again)
-1. COMPILE THEN CONTAINERIZE
+1. COMPILE
 3. FINAL REPORT: Implementation, Maintenance, Appendix

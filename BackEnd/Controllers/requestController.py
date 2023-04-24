@@ -13,7 +13,7 @@ bluePrint = Blueprint("request", __name__)
 # Map endpoints to functions
 
 
-#
+# Nothing to blueprint for this project stack
 
 
 # END ROUTES

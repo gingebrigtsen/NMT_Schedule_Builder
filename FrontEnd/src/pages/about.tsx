@@ -41,7 +41,7 @@ const About: FunctionComponent = () => {
 
       <Wrapper>
         {/* Section I: Site Logo, Branding, and page information */}
-        <EuiSpacer size="l" />
+        <EuiSpacer size="s" />
         <EuiFlexGroup style={head}>
           <EuiFlexItem>
             <EuiText>
@@ -76,7 +76,7 @@ const About: FunctionComponent = () => {
 
         {/* Section II: Information about the site, Why it was needed */}
         {/* Factoids and survey data for what NMT users wanted */}
-        <EuiSpacer size="l" />
+        <EuiSpacer size="m" />
         <EuiFlexGroup>
           <EuiFlexItem>
             {/* Preface regarding the source of survey information quoted thru-out the page */}
@@ -93,7 +93,7 @@ const About: FunctionComponent = () => {
           </EuiFlexItem>
         </EuiFlexGroup>
 
-        <EuiSpacer size="l" />
+        <EuiSpacer size="m" />
         <EuiFlexGroup>
           {/* Left bullet point list */}
           <EuiFlexItem>
@@ -143,7 +143,7 @@ const About: FunctionComponent = () => {
         </EuiFlexGroup>
 
         {/* Section III: more about the purpose of the site */}
-        <EuiSpacer size="l" />
+        <EuiSpacer size="m" />
         <EuiText textAlign="center">
           <h2>Why use our site over Banweb or Beanweb?</h2>
         </EuiText>
@@ -178,7 +178,7 @@ const About: FunctionComponent = () => {
           </EuiFlexItem>
         </EuiFlexGroup>
         <EuiSpacer size="m" />
-        <EuiSpacer size="l" />
+        <EuiSpacer size="m" />
 
         {/* Section IV: Useful Links and misc */}
         <EuiFlexGroup style={head}>
@@ -250,7 +250,8 @@ const About: FunctionComponent = () => {
             </EuiText>
           </EuiFlexItem>
         </EuiFlexGroup>
-        <EuiSpacer size="l" />
+        <EuiSpacer size="m" />
+        <EuiSpacer size="m" />
       </Wrapper>
     </>
   );

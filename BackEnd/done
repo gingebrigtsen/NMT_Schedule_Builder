@@ -10,6 +10,7 @@ Front:
 5. switch to 30m intervals
 7. add to cart button opens cart to show current status
 6. time conflict in cart modal
+copy selected CRNs to clipboard handling
 PAGES: [Report, About, Help, 404, Index, Calendar, Lookup]
 COMPONENTS: [Header, Footer, ]
 
@@ -19,7 +20,7 @@ Back:
 2. Update scraping to generate catalog URLs
 3. Update scraping to regularly recollect p_subj as well as p_term
 3. Update scraping to wrap every cell in doublequotes ""
-6. Build Flask code to send 'report' forms via email to NMT (DEBUG)
+6. Build code to send 'report' forms via email to NMT (DEBUG)
 5. Build Flask route to search csv using lookup query and return results (DEBUG)
 allocate csv space for frontend conflictFlag management
 BRANCHES: [Models, Controllers, Services]

@@ -46,4 +46,4 @@ def collectData():
 
 
 # DEBUG & Error Logging
-#sys.stderr = open('./Models/misc/log', 'a')
+sys.stderr = open('./Models/misc/log', 'a')

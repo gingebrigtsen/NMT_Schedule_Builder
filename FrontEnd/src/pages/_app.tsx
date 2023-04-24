@@ -22,14 +22,14 @@ const EuiApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
       <link rel="shortcut icon" href="/images/logo.ico" />
     </Head>
 
-    <Global styles={globalStyes} />
-    <Theme>
-      <Chrome>
-        <EuiErrorBoundary>
-          <Component {...pageProps} />
+    <Global styles={globalStyes} /> {/* .next styling */}
+    <Theme> {/* .next/node engine theme */}
+      <Chrome> {/* browser props */}
+        <EuiErrorBoundary> {/* elastic ui window definition */}
+          <Component {...pageProps} /> {/* render page content */}
         </EuiErrorBoundary>
       </Chrome>
-      <Footer />
+      <Footer /> {/* page page footer */}
     </Theme>
   </>
 );

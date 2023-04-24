@@ -69,7 +69,7 @@ const Help: FunctionComponent = () => {
                   <br />
                 </a>
                 Or the development team{' '}
-                <a href="mailto:gabriel.ingebrigtsen-leiker@student.nmt.edu">
+                <a href="mailto:gabriel.ingebrigtsen.leiker@gmail.com">
                   here
                   <br />
                 </a>
@@ -132,8 +132,9 @@ const Help: FunctionComponent = () => {
                 </li>
                 <i>Can I share my schedule with others on the website?</i>
                 <li>
-                  Yes, the generated calendar can be exported and shared or
-                  integrated into your google account.
+                  Yes, the generated calendar can be used to export your CRNs to
+                  Banweb in order to register, and screenshotted to be saved for
+                  later or shared.
                 </li>
                 <i>
                   How frequently is the course information updated on the
