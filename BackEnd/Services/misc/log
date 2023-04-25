@@ -665,3 +665,55 @@ Traceback (most recent call last):
     term = data['term']
 KeyError: 'term'
 127.0.0.1 - - [24/Apr/2023 17:51:27] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 21:08:44] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2023 21:08:44] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 142, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 21:11:26] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 58, in serve_query
+    df_term = pd.read_csv(f'Models/csv/{term}P.csv')
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: "Models/csv/[{'label': 'Spring 2023', 'checked': 'on'}]P.csv"
+127.0.0.1 - - [24/Apr/2023 21:11:26] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 21:17:50] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2023 21:17:51] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 142, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [24/Apr/2023 21:23:42] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [24/Apr/2023 21:23:42] "POST /api/serve_query HTTP/1.1" 200 -

@@ -1,5 +1,5 @@
 // Data and Imports
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState, useEffect } from 'react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -40,12 +40,20 @@ const title = {
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Calendar: FunctionComponent = () => {
-  // Defining user cart, populating with selected course data
-  const [cart, setCart] = useState([]);
-
+  // fetching usrCart session variable to display data
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch('/http://localhost:5000/api/get_cart')
+      .then(response => response.json())
+      .then(response => {
+        setData(response.items);
+      });
+  }, []);
+  
+  // handling exporting CRNs to clipboard
   const handleClick = async () => {
     // Join the CRNs with whitespace separation for pasting into banweb
-    const formattedData = cart.map(item => item.CRN).join(' ');
+    const formattedData = data.map(item => item.CRN).join(' ');
 
     try {
       // Use Clipboard API to write text to clipboard

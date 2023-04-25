@@ -32,7 +32,7 @@ const head = {
 
 // --------
 
-// Defining variables and managing data flow for displayed elements
+// static demo displayed elements
 // const initialData = [
 //   {
 //     CRN: 12345,
@@ -154,6 +154,24 @@ const Result = () => {
   // takes selected items, and adds them to user session variable
   // so that they can be access from the cart and the calendar
   const onAddButtonClick = () => {
+    // collect a list of selected results
+    const addItems = selectedItems.map(itemId => {
+      // match item by CRN
+      return data.find(item => item.CRN === itemId)
+    })
+
+    // utilizing backend endpoint to add list to session variable
+    fetch('http://localhost:5000/api/add_to_cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ addItems })
+    })
+      .then(response => response.json())
+      .then(response => console.log(response));
+
+    // opening the cart modal after populating cart
     setIsModalVisible(true);
   };
 

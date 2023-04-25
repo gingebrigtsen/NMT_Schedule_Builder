@@ -272,6 +272,7 @@ const Lookup: FunctionComponent = () => {
             <EuiFieldSearch
               placeholder="Search for Anything..."
               aria-label="Search"
+              onChange={handleSearchChange}
             />
           </EuiFlexItem>
         </EuiFlexGroup>

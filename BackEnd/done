@@ -11,6 +11,7 @@ Front:
 7. add to cart button opens cart to show current status
 6. time conflict in cart modal
 copy selected CRNs to clipboard handling
+11. isSelected, conflictFlag data integration
 PAGES: [Report, About, Help, 404, Index, Calendar, Lookup]
 COMPONENTS: [Header, Footer, ]
 
@@ -23,6 +24,8 @@ Back:
 6. Build code to send 'report' forms via email to NMT (DEBUG)
 5. Build Flask route to search csv using lookup query and return results (DEBUG)
 allocate csv space for frontend conflictFlag management
+4. Flask route & code: usr sess data <=> results, cart, cal
+7. Flask code: copy selected CRNs to clipboard
 BRANCHES: [Models, Controllers, Services]
 
 

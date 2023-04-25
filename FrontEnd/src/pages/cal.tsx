@@ -1,54 +1,51 @@
 // Data and Imports
-import useState from 'react';
+import { useState, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
-// Defining user cart, populating with selected course data
-// const [cart, setCart] = useState([]);
-
 // --------
 
-// static sample json
-const events = [
-  {
-    title: 'PHYS 201',
-    start: '2023-04-24T10:00:00',
-    end: '2023-04-24T12:00:00',
-    details: [
-      'Physics II\n',
-      'Workman Hall\n',
-      '10:00am - 12:00pm\n',
-      'Main Campus\n',
-      'Instructor Name',
-    ],
-  },
-  {
-    title: 'IT 101',
-    start: '2023-04-25T10:00:00',
-    end: '2023-04-25T11:30:00',
-    details: [
-      'Intro to IT\n',
-      'Cramer Hall\n',
-      '10:00am - 11:30am\n',
-      'Main Campus\n',
-      'Instructor Name',
-    ],
-  },
-  {
-    title: 'PHIL 101',
-    start: '2023-04-25T12:30:00',
-    end: '2023-04-25T13:30:00',
-    details: [
-      'Intro to Philosophy\n',
-      'Jones Hall\n',
-      '12:30am - 1:30pm\n',
-      'Main Campus\n',
-      'Instructor Name',
-    ],
-  },
-];
+// static demo sample json
+// const events = [
+//   {
+//     title: 'PHYS 201',
+//     start: '2023-04-24T10:00:00',
+//     end: '2023-04-24T12:00:00',
+//     details: [
+//       'Physics II\n',
+//       'Workman Hall\n',
+//       '10:00am - 12:00pm\n',
+//       'Main Campus\n',
+//       'Instructor Name',
+//     ],
+//   },
+//   {
+//     title: 'IT 101',
+//     start: '2023-04-25T10:00:00',
+//     end: '2023-04-25T11:30:00',
+//     details: [
+//       'Intro to IT\n',
+//       'Cramer Hall\n',
+//       '10:00am - 11:30am\n',
+//       'Main Campus\n',
+//       'Instructor Name',
+//     ],
+//   },
+//   {
+//     title: 'PHIL 101',
+//     start: '2023-04-25T12:30:00',
+//     end: '2023-04-25T13:30:00',
+//     details: [
+//       'Intro to Philosophy\n',
+//       'Jones Hall\n',
+//       '12:30am - 1:30pm\n',
+//       'Main Campus\n',
+//       'Instructor Name',
+//     ],
+//   },
+// ];
 
 // --------
 
@@ -71,7 +68,7 @@ const options = {
       </div>
     );
   },
-  events: events,
+  // events: events,
   eventBackgroundColor: '#BBBBBB',
   eventBorderColor: '#666666',
   eventMargin: 25,
@@ -93,9 +90,19 @@ const options = {
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Cal = () => {
+  // fetching usrCart session variable to display data
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch('/http://localhost:5000/api/get_events')
+      .then(response => response.json())
+      .then(response => {
+        setData(response.items);
+      });
+  }, []);
+
   return (
     <div style={{ height: 'auto', padding: '10px' }}>
-      <FullCalendar height={768} {...options} />
+      <FullCalendar height={768} {...options} events={data} />
     </div>
   );
 };
