@@ -108,7 +108,7 @@ const Lookup: FunctionComponent = () => {
   };
 
   // defining inter-component results data structure
-  const [data, setData] = useState([]);
+  const [result, setResult] = useState([]);
   // On form submission, package data for backend to run search
   const handleSearchSubmit = () => {
     // create data object of search query and selected options
@@ -136,7 +136,7 @@ const Lookup: FunctionComponent = () => {
         // debugging purposes
         console.log('Search results:', data);
         // updating data state with search results
-        setData(data)
+        setResult(data);
       })
 
       // catching errors and logging to console
@@ -312,7 +312,7 @@ const Lookup: FunctionComponent = () => {
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween">
           <EuiFlexItem>
-            <Result />
+            <Result resultData={result} />
           </EuiFlexItem>
         </EuiFlexGroup>
         <EuiSpacer size="l" />

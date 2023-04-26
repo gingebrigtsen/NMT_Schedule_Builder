@@ -127,6 +127,7 @@ const Header = () => {
         // configuration for dark/light mode theme switching
         {
           items: [
+            <ThemeSwitcher key="theme-switcher" />,
             <EuiHeaderSectionItem key="links" border="right">
               <EuiHeaderLink
                 iconType="plusInCircleFilled"
@@ -142,7 +143,6 @@ const Header = () => {
                 Help
               </EuiHeaderLink>
             </EuiHeaderSectionItem>,
-            <ThemeSwitcher key="theme-switcher" />,
           ],
           borders: 'none',
         },

@@ -1,4 +1,4 @@
-"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog"
+"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog","Float"
 "10570","BIOL 3041-01","M","M W F","06/05/2023-07/28/2023","1100-1150","TBA","3","CLAS","Introductory Microbiology","Thomas Kieft","30","30","0","0","N/A","https://catalog.nmt.edu/courses/BIOL3041",""
 "10552","BIOL 5091-01","M","","06/05/2023-07/28/2023","","","1","CLAS","Thesis","Linda C. DeVeaux","10","10","0","0","N/A","https://catalog.nmt.edu/courses/BIOL5091",""
 "10616","BIOL 5091-02","M","","06/05/2023-07/28/2023","","","1","CLAS","Thesis","Benjamin D. Duval","10","10","0","0","N/A","https://catalog.nmt.edu/courses/BIOL5091",""

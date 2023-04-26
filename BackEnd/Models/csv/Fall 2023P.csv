@@ -1,4 +1,4 @@
-"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog"
+"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog","Float"
 "20910","ACCT 2110-01","M","M W F","08/14/2023-12/08/2023","0900-0950","TBA","3","CLAS","Fundamentals of Accounting I","Suraj Ghimire","0","0","0","0","$25","https://catalog.nmt.edu/courses/ACCT2110",""
 "21895","ACCT 3071-01","M","T R","08/14/2023-12/08/2023","1700-1815","TBA","3","CLAS","Financial Accounting","Carrie A. Marsyla","0","0","0","0","N/A","https://catalog.nmt.edu/courses/ACCT3071",""
 "22343","AE 3013-01D","DE","T R","08/14/2023-12/08/2023","0800-0915","WEB-V","3","CLAS","Orbital Mechanics","David Westpfahl","20","20","0","0","$60","https://catalog.nmt.edu/courses/AE3013",""

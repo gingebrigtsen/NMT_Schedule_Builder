@@ -717,3 +717,567 @@ KeyboardInterrupt
 [33mPress CTRL+C to quit[0m
 127.0.0.1 - - [24/Apr/2023 21:23:42] "OPTIONS /api/serve_query HTTP/1.1" 200 -
 127.0.0.1 - - [24/Apr/2023 21:23:42] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 18:30:20] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 196, in serve_query
+    df_term['Lvl'] = df_term['Course'].str.extract('([0-9]{1,4})').str[0]
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/pandas/core/generic.py", line 5989, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'str'
+127.0.0.1 - - [25/Apr/2023 18:30:20] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 265, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 18:34:02] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:34:02] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:35:16] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:35:17] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:37:14] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:37:14] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 265, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 18:39:37] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:39:37] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:43:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:43:32] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 265, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 18:46:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:46:32] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:53:54] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:53:55] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 265, in cleanup
+    for thread in t:
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 18:58:52] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 18:58:52] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:03:37] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:03:37] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:11:05] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:11:05] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:25:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:25:32] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 272, in cleanup
+    t = threading.enumerate()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:27:04] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:27:04] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 275, in cleanup
+    if thread is not threading.current_thread():
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:28:22] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:28:22] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:37:45] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:37:46] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:39:49] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:39:49] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 276, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:41:01] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:41:01] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:45:27] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:45:28] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:47:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:47:33] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:49:20] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:49:20] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:50:03] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:50:04] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:52:53] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 19:52:53] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 19:59:04] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 234, in serve_query
+    response = make_response(jsonify(results, allow_nan=True))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/provider.py", line 273, in response
+    obj = self._prepare_response_obj(args, kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/provider.py", line 80, in _prepare_response_obj
+    raise TypeError("app.json.response() takes either args or kwargs, not both")
+TypeError: app.json.response() takes either args or kwargs, not both
+127.0.0.1 - - [25/Apr/2023 19:59:05] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 20:11:03] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 234, in serve_query
+    response = make_response(jsonify(results, allow_nan=True))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/provider.py", line 273, in response
+    obj = self._prepare_response_obj(args, kwargs)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/json/provider.py", line 80, in _prepare_response_obj
+    raise TypeError("app.json.response() takes either args or kwargs, not both")
+TypeError: app.json.response() takes either args or kwargs, not both
+127.0.0.1 - - [25/Apr/2023 20:11:04] "[35m[1mPOST /api/serve_query HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 20:12:18] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:12:18] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 20:23:15] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:23:15] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:29:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:29:32] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 20:49:00] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:49:01] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:50:34] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:50:34] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:51:21] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:51:21] "POST /api/add_to_cart HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 20:54:53] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:54:54] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:55:36] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:55:37] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:56:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:56:48] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:57:44] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:57:45] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:58:30] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 20:58:31] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:01:03] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:01:27] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:01:27] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:02:20] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:02:20] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:02:20] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:02:48] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:03:05] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:03:06] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:03:06] "POST /api/add_to_cart HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 282, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:05:32] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:05:32] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:05:58] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:05:58] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:05:58,490] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 84, in get_cart
+    print(session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:05:58] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:09:02] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:09:02] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:09:24] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:09:24] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:09:25,005] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 84, in get_cart
+    print('get from cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:09:25] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+127.0.0.1 - - [25/Apr/2023 21:11:59] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:11:59,912] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 84, in get_cart
+    # get items from session
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:11:59] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+127.0.0.1 - - [25/Apr/2023 21:12:00] "POST /api/add_to_cart HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 285, in cleanup
+    if thread is not threading.current_thread():
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:13:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:13:48] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:14:00] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:14:01] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:14:01,441] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 85, in get_cart
+    print('get from cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:14:01] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 286, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:17:08] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:17:09] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:17:23] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:17:23] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:17:23] "OPTIONS /api/get_cart HTTP/1.1" 200 -
+[2023-04-25 21:17:23,818] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 85, in get_cart
+    print('get from cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:17:23] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+127.0.0.1 - - [25/Apr/2023 21:18:05] "OPTIONS /api/get_cart HTTP/1.1" 200 -
+[2023-04-25 21:18:05,658] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 85, in get_cart
+    print('get from cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:18:05] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 286, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:22:01] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:22:01] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:22:58] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:22:58] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:23:18] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:23:19] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:23:19] "OPTIONS /api/get_cart HTTP/1.1" 200 -
+[2023-04-25 21:23:19,511] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 86, in get_cart
+    print('get_cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:23:19] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[2023-04-25 21:24:50,681] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 86, in get_cart
+    print('get_cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:24:50] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+127.0.0.1 - - [25/Apr/2023 21:25:25] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:25:25] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:25:39] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:25:39] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:25:40,098] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 86, in get_cart
+    print('get_cart:\n', session['usrCart'])
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:25:40] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 288, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:28:28] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:28:28] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:28:42] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:28:42] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:28:42,677] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 88, in get_cart
+    print('get_cart:\n', session['usrCart']) # DEBUG
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:28:42] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [25/Apr/2023 21:36:13] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:36:13] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:36:23] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2023 21:36:24] "POST /api/add_to_cart HTTP/1.1" 200 -
+[2023-04-25 21:36:24,339] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 88, in get_cart
+    print('get_cart:\n', session['usrCart']) # DEBUG
+KeyError: 'usrCart'
+127.0.0.1 - - [25/Apr/2023 21:36:24] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -

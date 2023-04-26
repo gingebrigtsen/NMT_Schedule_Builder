@@ -39,6 +39,7 @@ def index():
 # helper function
 # checking whether courses overlap to determine timeconflict status
 def time_overlap(time1, time2):
+    print('entered time_overlap\n') # DEBUG
     start1, end1 = [int(x) for x in time1.split('-')]
     start2, end2 = [int(x) for x in time2.split('-')]
     return ((start1 >= start2 and start1 < end2) or (start2 >= start1 and start2 < end1))
@@ -47,6 +48,7 @@ def time_overlap(time1, time2):
 # helper function
 # checking time conflict using course data and time_overlap()
 def time_conflict(item, items):
+    print('entered time_conflict\n') # DEBUG
     for i in items:
         # skip comparing the same courses
         if i['CRN'] == item['CRN']:
@@ -62,8 +64,10 @@ def time_conflict(item, items):
 # stores for later service to Cart, Cal
 @app.route('/api/add_to_cart', methods=['POST'])
 def add_to_cart():
-    items = request.json.get('items', [])
+    items = request.json.get('addItems', [])
+    # print('items:\n', items) # DEBUG
     session['usrCart'] = items
+    # print('Add to cart:\n', session['usrCart']) # DEBUG
     return {"message": "Items added to cart"}
 
 
@@ -71,79 +75,95 @@ def add_to_cart():
 # pulls from session variable in json format, and sends to page
 @app.route('/api/get_cart', methods=['GET', 'OPTIONS'])
 def get_cart():
-    # Handle preflight requests
-    if request.method == 'OPTIONS':
+    try:
+        print('entered get_cart\n') # DEBUG
+
         response = make_response()
-        response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-        response.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
+        # Handle preflight requests
+        if request.method == 'OPTIONS':
+            response = make_response()
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+        else:
+            # get items from session
+            print('get_cart:\n', session['usrCart']) # DEBUG
+            items = session.get('usrCart', [])
+
+            # add fields for isSelected, cF, all set to false by default
+            for item in items:
+                item['isSelected'] = False
+                item['cF'] = time_conflict(item, items)
+            
+            # send to page
+            response = make_response({"items": items})
         response.headers['Access-Control-Allow-Origin'] = '*'
         return response
-        
-    # get items from session
-    items = session.get('usrCart', [])
-
-    # add fields for isSelected, cF, all set to false by default
-    for item in items:
-        item['isSelected'] = False
-        item['cF'] = time_conflict(item, items)
-    
-    # send to page
-    response = make_response({"items": items})
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return response
+    except Exception as e:
+        print(f'Error: {e}')
+        response = make_response({"error:" str(e)}, 500)
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        return response
 
 
 # get cart items to display as events
 # pulls from session variable in json formate, sends to page
 @app.route('/api/get_events', methods=['GET', 'OPTIONS'])
 def get_events():
-    # Handle preflight requests
-    if request.method == 'OPTIONS':
-        response = make_response()
-        response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-        response.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
+    try:
+        print('entered get_events\n') # DEBUG
+        # Handle preflight requests
+        if request.method == 'OPTIONS':
+            response = make_response()
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+            response.headers['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            return response
+        
+        # get items from session
+        print('get_events:\n', session['usrCart']) # DEBUG
+        items = session.get('usrCart', [])
+
+        # parse into fullcalendar format
+        events = []
+        for item in items:
+            # parse days
+            dayMap = {'M': 0, 'T': 1, 'W': 2, 'R': 3, 'F': 4}
+            days = item['Days'].strip().split()
+
+            # parse start/end
+            startT, endT = item['Time'].split('-')
+            startT = datetime.strptime(startT, '%H%M')
+            endT = datetime.strptime(endT, '%H%M')
+
+            # generate separate events for each day in days
+            for day in days:
+                startD = datetime.now().date() + timedelta(days=(dayMap[day] - datetime.now().weekday()) % 7)
+                start = datetime.combine(startD, startT.time())
+                end = datetime.combine(startD, endT.time())
+
+                # add reformatted course data to events to be rendered
+                events.append({
+                    'title': item['Course'],
+                    'start': start.isoformat(),
+                    'end': end.isoformat(),
+                    'details': [
+                        item['Title'],
+                        item['Location'],
+                        f"{startT.strftime('%I:%M%p')} - {endT.strftime('%I:%M%p')}",
+                        item['*Campus'],
+                        item['Instructor'],
+                    ],
+                })
+
+        # send events to page
+        response = make_response({"items": events})
         response.headers['Access-Control-Allow-Origin'] = '*'
         return response
-    
-    # get items from session
-    items = session.get('usrCart', [])
-
-    # parse into fullcalendar format
-    events = []
-    for item in items:
-        # parse days
-        dayMap = {'M': 0, 'T': 1, 'W': 2, 'R': 3, 'F': 4}
-        days = item['Days'].strip().split()
-
-        # parse start/end
-        startT, endT = item['Time'].split('-')
-        startT = datetime.strptime(startT, '%H%M')
-        endT = datetime.strptime(endT, '%H%M')
-
-        # generate separate events for each day in days
-        for day in days:
-            startD = datetime.now().date() + timedelta(days=(dayMap[day] - datetime.now().weekday()) % 7)
-            start = datetime.combine(startD, startT.time())
-            end = datetime.combine(startD, endT.time())
-
-            # add reformatted course data to events
-            events.append({
-                'title': item['Course'],
-                'start': start.isoformat(),
-                'end': end.isoformat(),
-                'details': [
-                    item['Title'],
-                    item['Location'],
-                    f"{startT.strftime('%I:%M%p')} - {endT.strftime('%I:%M%p')}",
-                    item['*Campus'],
-                    item['Instructor'],
-                ],
-            })
-
-    # send events to page
-    response = make_response({"items": events})
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    return response
+    except Exception as e:
+        print(f'Error: {e}')
+        response = make_response({"error:" str(e)}, 500)
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        return response
 
 
 # Handling lookup queries csv->json->frontend
@@ -175,13 +195,15 @@ def serve_query():
         if (isinstance(data['query'], str) and data['query'].strip()):
             # opening the proper csv by term selection
             term = data.get('terms', 'Spring 2023')[0]['label']
-            df_term = pd.read_csv(f'Models/csv/{term}P.csv')
+            df_term = pd.read_csv(f'Models/csv/{term}P.csv', keep_default_na=False)
+            # drop NaNs
+            df_term = df_term.drop(['Float'], axis=1)
 
             # extracting entries matching user text query 
             # from data, adding to results
             query = data['query'].strip()
             df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.contains(query).any(), axis=1)]
-            print(df_filtered) # DEBUG
+            print('query:\n', df_filtered) # DEBUG
 
             # add filtered data to search results
             results += df_filtered.to_dict('records')
@@ -189,33 +211,48 @@ def serve_query():
         else:
             # opening the proper csv by term selection
             term = data.get('terms', 'Spring 2023')[0]['label']
-            df_term = pd.read_csv(f'Models/csv/{term}P.csv')
+            df_term = pd.read_csv(f'Models/csv/{term}P.csv', keep_default_na=False)
+            # drop NaNs
+            df_term = df_term.drop(['Float'], axis=1)
 
             # extract dept and lvl from Course column
             df_term['Department'] = df_term['Course'].str.extract('([A-Z]+)')[0]
-            df_term['Lvl'] = df_term['Course'].str.extract('([0-9]{1,4})').str[0]
+            # print(df_term['Department']) # DEBUG
+            df_term['Lvl'] = df_term['Course'].str.extract('([0-9]{1,4})')[0]
+            # print(df_term['Lvl']) # DEBUG
 
             # filter data by selected subjects
-            selected_subjects = [option['label'].split()[1] 
+            selected_subjects = [option['label'].split()[-1] 
                 for option in data['subjects'] if option.get('checked')]
+            # print('ss:\n', selected_subjects) # DEBUG
             df_filtered = df_term[df_term['Department'].isin(selected_subjects)]
-            print(df_filtered) # DEBUG
+            # print('subject:\n', df_filtered) # DEBUG
 
             # filter data by selected levels
-            selected_levels = [option['label'].split()[0] 
-                for option in data['levels'] if option.get('checked')]
-            df_filtered = df_filtered[df_filtered['Lvl'].isin(selected_levels)]
-            print(df_filtered) # DEBUG
+            # get first digit for each option label
+            selected_levels = [option['label'].split()[0][0] for option in data['levels'] if option.get('checked')]
+            # print('sl:\n', selected_levels) # DEBUG
+            # join digits via pipes for regex OR operation
+            level_rexp = '|'.join(selected_levels)
+            # print('lvlrxp:\n', level_rexp) # DEBUG
+            # format into parens, followed by any 1-3 digits in the range 0-9
+            level_rexp = f'({level_rexp})([0-9]{{1,3}})'
+            # print('lvlrxp:\n', level_rexp) # DEBUG
+            # Filter the frame
+            df_filtered = df_filtered[df_filtered['Lvl'].str.match(level_rexp)]
+            # print('level:\n', df_filtered) # DEBUG
 
             # remove temp dept and lvl columns
             df_filtered = df_filtered.drop(['Department', 'Lvl'], axis=1)
-            print(df_filtered) # DEBUG
+            # print('cleanup:\n', df_filtered) # DEBUG
 
             # add filtered data to search results
             results += df_filtered.to_dict('records')
 
         # return the search results as JSON
+        # print('results:\n', results) # DEBUG
         response = make_response(jsonify(results))
+        # print('resultsJSON:\n', response.data) # DEBUG
         response.headers['Access-Control-Allow-Origin'] = '*'
         return response
     except Exception as e:

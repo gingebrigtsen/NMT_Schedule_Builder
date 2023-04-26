@@ -1,4 +1,4 @@
-"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog"
+"CRN","Course","*Campus","Days","Date","Time","Location","Hrs","Type","Title","Instructor","Seats","Limit","Enroll","Waitlist","Course Fees","Catalog","Float"
 "31757","ACCT 2120-01","M","M W","01/16/2023-05/09/2023","1700-1815","CRAMER 120","3","CLAS","Principles of Accounting II","Suraj Ghimire","11","20","9","0","N/A","https://catalog.nmt.edu/courses/ACCT2120",""
 "31230","AE 489-01D","DE","M W F","01/16/2023-05/09/2023","0800-0850","WEB-V","3","CLAS","Space Environment","David Westpfahl","11","25","14","0","$10","https://catalog.nmt.edu/courses/AE489",""
 "31231","AE 489-02","M","T R","01/16/2023-05/09/2023","1230-1345","CRAMER 107","3","CLAS","Advanced Fluid Mechanics","Sayavur Bakhtiyarov","12","15","3","0","$50","https://catalog.nmt.edu/courses/AE489",""

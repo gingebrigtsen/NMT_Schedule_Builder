@@ -80,7 +80,7 @@ const Cart = () => {
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
   const [pageSize, setPageSize] = useState(5);
-  const [sortField, setSortField] = useState('firstName');
+  const [sortField, setSortField] = useState('Title');
   const [sortDirection, setSortDirection] = useState('asc');
   const [pageOfItems, setPageOfItems] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
@@ -88,7 +88,7 @@ const Cart = () => {
   // fetching usrCart session variable to display data
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('/http://localhost:5000/api/get_cart')
+    fetch('http://localhost:5000/api/get_cart')
       .then(response => response.json())
       .then(response => {
         setData(response.items);
