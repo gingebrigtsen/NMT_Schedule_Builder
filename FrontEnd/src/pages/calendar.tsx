@@ -43,7 +43,9 @@ const Calendar: FunctionComponent = () => {
   // fetching usrCart session variable to display data
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('/http://localhost:5000/api/get_cart')
+    fetch('http://localhost:5000/api/get_cart', {
+      credentials: 'include',
+    })
       .then(response => response.json())
       .then(response => {
         setData(response.items);
@@ -138,6 +140,10 @@ const Calendar: FunctionComponent = () => {
           <p>
             *Note: this is not an official calendar, and you must still use
             Banweb to register
+          </p>
+          <p>
+            *Note: you'll need to refresh the page to update the calendar if you
+            make changes to your cart.
           </p>
         </EuiText>
         <EuiSpacer size="m" />

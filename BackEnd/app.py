@@ -1,5 +1,5 @@
 # ---------------- Imports and Data
-import atexit, time, threading, json
+import atexit, time, threading, re
 from flask import Flask, session, request, jsonify
 from flask_session import Session
 from flask import make_response
@@ -7,6 +7,7 @@ from flask_cors import CORS
 from traceback import print_exc
 from datetime import datetime, timedelta
 import pandas as pd
+import redis
 from Models import CollectData
 from Services import requestService
 
@@ -20,11 +21,17 @@ app.config["DEBUG"] = True
 
 # Session Config
 app.config['SECRET_KEY'] = '515723' # Use a random and secure key
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_TYPE'] = 'redis'
+app.config['SESSION_REDIS'] = redis.from_url('redis://localhost:6379')
+app.config['SESSION_PERMANENT'] = False # Set non-permanent session
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=24) # Force expiry after 24h
+app.config['SESSION_USE_SIGNER'] = True # Sign session cookies
+app.config['SESSION_FILE_THRESHOLD'] = 100 # increase number of session files storage
+app.config['SESSION_FILE_MODE'] = 600 # set file mode for stricter session file access
 Session(app)
 
 # CORS Config
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
 
 
 # ---------------- ROUTES
@@ -48,15 +55,43 @@ def time_overlap(time1, time2):
 # helper function
 # checking time conflict using course data and time_overlap()
 def time_conflict(item, items):
-    print('entered time_conflict\n') # DEBUG
+    print('entered time_conflict\n')  # DEBUG
     for i in items:
         # skip comparing the same courses
         if i['CRN'] == item['CRN']:
             continue
-        if set(item['Days'].split()) & set(i['Days'].split()):
+        # Ensure that both item['Days'] and i['Days'] are strings
+        item_days = item['Days'] if type(item['Days']) == str else "".join(item['Days'])
+        i_days = i['Days'] if type(i['Days']) == str else "".join(i['Days'])
+
+        # Determine overlap flag
+        if set(item_days) & set(i_days):
             if time_overlap(item['Time'], i['Time']):
                 return True
     return False
+
+
+# declare and initialize usrCart session variable
+# prepares it for use in result, cart, calendar, cal
+@app.before_request
+def init_usrCart():
+    if not session.get('usrCart'):
+        session['usrCart'] = []
+
+
+# DEBUG
+# clear the entire cart session variable
+@app.route('/api/clear_cart', methods=['POST'])
+def clear_cart():
+    print('manually clearing cart')# DEBUG
+    # clear session var
+    session['usrCart'] = []
+
+    # clear modification flag
+    session['modified'] = None
+
+    # return status msg
+    return {"message": "cart cleared"}
 
 
 # Adding selected search results to usrcart session variable
@@ -64,11 +99,48 @@ def time_conflict(item, items):
 # stores for later service to Cart, Cal
 @app.route('/api/add_to_cart', methods=['POST'])
 def add_to_cart():
+    # get added items
     items = request.json.get('addItems', [])
-    # print('items:\n', items) # DEBUG
-    session['usrCart'] = items
-    # print('Add to cart:\n', session['usrCart']) # DEBUG
+
+    # get session var
+    usrCart = session['usrCart']
+    # add selected items
+    for i in items:
+        if isinstance(i, dict):
+            usrCart.append(i) # add items
+
+    # update session var
+    session['usrCart'] = [item for item in usrCart if item is not None]
+
+    # modification flag
+    session['modified'] = True
+    print('Add to cart:\n', session['usrCart']) # DEBUG
+    print('addSID:\n', session.sid) # DEBUG
     return {"message": "Items added to cart"}
+
+
+# Deleting selected cart items from usrcart session variable
+# ensures cart and cal have user choices accurately
+@app.route('/api/del_cart', methods=['POST'])
+def del_cart():
+    # get deletion items
+    items = request.json.get('delItems', [])
+
+    # get session var
+    usrCart = session['usrCart']
+    # delete selected items
+    for i in usrCart:
+        if isinstance(i, dict) and i in items:
+            usrCart.remove(i) # del items
+
+    # update session var
+    session['usrCart'] = [item for item in usrCart if item is not None]
+
+    # modification flag
+    session['modified'] = True
+    print('deleted objects from cart:\n', session['usrCart']) # DEBUG
+    print('delSID:\n', session.sid) # DEBUG
+    return {"message": "Items removed from cart"}
 
 
 # Getting cart items to display in cart
@@ -76,32 +148,36 @@ def add_to_cart():
 @app.route('/api/get_cart', methods=['GET', 'OPTIONS'])
 def get_cart():
     try:
-        print('entered get_cart\n') # DEBUG
-
-        response = make_response()
+        print('usrCart:\n', session['usrCart']) # DEBUG
+        print('getSID:\n', session.sid) # DEBUG
         # Handle preflight requests
         if request.method == 'OPTIONS':
             response = make_response()
             response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
             response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
         else:
-            # get items from session
-            print('get_cart:\n', session['usrCart']) # DEBUG
-            items = session.get('usrCart', [])
+            # Check if 'usrCart' is in the session
+            if session.get('modified', None) == True:
+                # get items from session
+                print('realget\n') # DEBUG
+                items = session.get('usrCart')
+            else:
+                print('falseget\n') # DEBUG
+                items = []  # Set items to empty if no 'usrCart'
 
             # add fields for isSelected, cF, all set to false by default
             for item in items:
-                item['isSelected'] = False
-                item['cF'] = time_conflict(item, items)
+                if item:
+                    item['isSelected'] = False
+                    item['cF'] = time_conflict(item, items)
             
             # send to page
             response = make_response({"items": items})
-        response.headers['Access-Control-Allow-Origin'] = '*'
+            print('get_cartResponse:\n', response.data) # DEBUG
         return response
     except Exception as e:
         print(f'Error: {e}')
-        response = make_response({"error:" str(e)}, 500)
-        response.headers['Access-Control-Allow-Origin'] = '*'
+        response = make_response({"error": str(e)}, 500)
         return response
 
 
@@ -157,13 +233,18 @@ def get_events():
 
         # send events to page
         response = make_response({"items": events})
-        response.headers['Access-Control-Allow-Origin'] = '*'
         return response
     except Exception as e:
         print(f'Error: {e}')
-        response = make_response({"error:" str(e)}, 500)
-        response.headers['Access-Control-Allow-Origin'] = '*'
+        response = make_response({"error": str(e)}, 500)
         return response
+
+
+# helper function for serve_query
+# parse, limit, sanitize text searches
+def sanitize(text):
+    allowed=re.compile()
+    return allowed.sub("", text)
 
 
 # Handling lookup queries csv->json->frontend
@@ -201,7 +282,8 @@ def serve_query():
 
             # extracting entries matching user text query 
             # from data, adding to results
-            query = data['query'].strip()
+            query = data['query'].strip()[:32]
+            query = sanitize(query)
             df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.contains(query).any(), axis=1)]
             print('query:\n', df_filtered) # DEBUG
 

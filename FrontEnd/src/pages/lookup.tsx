@@ -143,6 +143,16 @@ const Lookup: FunctionComponent = () => {
       .catch(error => {
         console.error('Error searching:', error);
       });
+
+    const resultsElement = document.getElementById('resultElement');
+    // scroll to show results better
+    if (resultsElement) {
+      setTimeout(() => {
+        resultsElement.scrollIntoView({ behavior: 'smooth' });
+      }, 1500);
+    } else {
+      console.error('Failed to find element with id "resultElement"');
+    }
   };
 
   // building page content
@@ -311,7 +321,7 @@ const Lookup: FunctionComponent = () => {
           </h4>
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween">
-          <EuiFlexItem>
+          <EuiFlexItem id="resultElement">
             <Result resultData={result} />
           </EuiFlexItem>
         </EuiFlexGroup>

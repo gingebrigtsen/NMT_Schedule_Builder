@@ -38,7 +38,7 @@ const Result = ({ resultData }) => {
   // cart modal control
   const [isModalVisible, setIsModalVisible] = useState(false);
   const closeModal = () => setIsModalVisible(false);
-  
+
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
   const [pageSize, setPageSize] = useState(10);
@@ -90,22 +90,35 @@ const Result = ({ resultData }) => {
     // collect a list of selected results
     const addItems = selectedItems.map(itemId => {
       // match item by CRN
-      return data.find(item => item.CRN === itemId)
-    })
+      return data.find(item => item.CRN === itemId);
+    });
 
     // utilizing backend endpoint to add list to session variable
     fetch('http://localhost:5000/api/add_to_cart', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ addItems })
+      credentials: 'include',
+      body: JSON.stringify({ addItems }),
     })
-      .then(response => response.json())
-      .then(response => console.log(response));
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(response => {
+        console.log('Items added to cart:', response);
+      })
+      .catch(error => {
+        console.error('Failed to fetch in add_to_cart:', error);
+      });
 
     // opening the cart modal after populating cart
-    setIsModalVisible(true);
+    setTimeout(() => {
+      setIsModalVisible(true);
+    }, 1500);
   };
 
   // Sorting logic for displayed data
@@ -167,7 +180,6 @@ const Result = ({ resultData }) => {
         </EuiToolTip>
       ),
       sortable: true,
-      truncateText: true,
     },
     {
       field: 'Days',
@@ -340,6 +352,8 @@ const Result = ({ resultData }) => {
           </EuiFlexItem>
         </EuiFlexGroup>
       )}
+      <EuiSpacer size="m" />
+      <EuiSpacer size="m" />
     </div>
   );
 };

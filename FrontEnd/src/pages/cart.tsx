@@ -11,52 +11,6 @@ import {
 
 // --------
 
-// custom defined element styles
-// bordered rounded tile
-const head = {
-  borderRadius: '25px',
-  border: '1px solid #666666',
-  padding: '5px',
-  top: 'auto',
-  bottom: 'auto',
-};
-
-// --------
-
-// static demo displayed elements
-// const initialData = [
-//   {
-//     CRN: 12345,
-//     Course: 'DEPT 123',
-//     Campus: 'Main',
-//     Days: 'M W F',
-//     Time: '10:00-11:30',
-//     Location: 'Smith Hall',
-//     isSelected: false,
-//     cF: false,
-//   },
-//   {
-//     CRN: 23456,
-//     Course: 'DEPT 234',
-//     Campus: 'Distance',
-//     Days: 'T R',
-//     Time: '13:00-14:30',
-//     Location: 'Online',
-//     isSelected: false,
-//     cF: true,
-//   },
-//   {
-//     CRN: 34567,
-//     Course: 'DEPT 345',
-//     Campus: 'Main',
-//     Days: 'M W',
-//     Time: '08:00-09:30',
-//     Location: 'Johnson Hall',
-//     isSelected: false,
-//     cF: false,
-//   },
-// ];
-
 // styling conflicting rows to be clearly visible to users
 // using conditional css based on cF flag
 const rowStyle = item => {
@@ -64,9 +18,9 @@ const rowStyle = item => {
     return {
       border: '1px solid red',
       backgroundColor: 'lightcoral',
-    }
+    };
   }
-  return {}
+  return {};
 };
 
 // --------
@@ -88,10 +42,25 @@ const Cart = () => {
   // fetching usrCart session variable to display data
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/api/get_cart')
-      .then(response => response.json())
+    fetch('http://localhost:5000/api/get_cart', {
+      credentials: 'include',
+    })
       .then(response => {
-        setData(response.items);
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(response => {
+        if ('items' in response) {
+          setData(response.items);
+        } else {
+          setData([]);
+        }
+        console.log('Selected results:', data);
+      })
+      .catch(error => {
+        console.error('Failed to fetch from get_cart:', error);
       });
   }, []);
 
@@ -107,7 +76,7 @@ const Cart = () => {
 
   // Managing checkbox selecting, starting by setting all to false
   const [isAllChecked, setIsAllChecked] = useState(false);
-  const onAllCheckboxChange = () => {
+  const onSelectAllChange = () => {
     setIsAllChecked(!isAllChecked);
     const selectedIds = isAllChecked ? [] : pageOfItems.map(item => item.CRN);
     setSelectedItems(selectedIds);
@@ -126,9 +95,55 @@ const Cart = () => {
   // takes selected items, removes from display & ession variable
   // so that they can be access from the cart and the calendar
   const onDeleteButtonClick = () => {
+    // removing data from rendered element
     const newData = data.filter(item => !selectedItems.includes(item.CRN));
     setData(newData);
+
+    // actually removing data from cart session var
+    const delItems = data.filter(item => selectedItems.includes(item.CRN));
     setSelectedItems([]);
+
+    // utilizing backend endpoint to del list from session variable
+    fetch('http://localhost:5000/api/del_cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({ delItems }),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(response => {
+        console.log('Items removed from cart:', response);
+      })
+      .catch(error => {
+        console.error('Failed to fetch del_cart:', error);
+      });
+  };
+
+  // handling when delete all has been clicked
+  const onClearButtonClick = () => {
+    fetch('http://localhost:5000/api/clear_cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.error('Failed to fetch del_cart:', error);
+      });
   };
 
   // Sorting logic for displayed data
@@ -146,7 +161,7 @@ const Cart = () => {
       sortedArr.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize)
     );
   }, [sortField, sortDirection, pageIndex, pageSize, data]); // add data to the dependencies array
-  const totalItemCount = data.length;
+  const totalItemCount = data ? data.length : 0;
 
   // --------
 
@@ -173,7 +188,7 @@ const Cart = () => {
       truncateText: true,
     },
     {
-      field: 'Campus',
+      field: '*Campus',
       name: (
         <EuiToolTip content="The campus, eg Main, Distance/Web">
           <span>Campus</span>
@@ -218,7 +233,7 @@ const Cart = () => {
           id="selectAllCheckbox"
           label="Select all rows"
           checked={isAllChecked}
-          onChange={onAllCheckboxChange}
+          onChange={onSelectAllChange}
         />
       ),
       width: '32px',
@@ -273,7 +288,20 @@ const Cart = () => {
           </EuiFlexItem>
         </EuiFlexGroup>
       )}
-      <i>To remove an item from your cart, select it, and click Delete.</i>
+      <EuiButton color="danger" onClick={onClearButtonClick}>
+        Delete all items
+      </EuiButton>
+      <br />
+      <i>Red entries indicate a time conflict among your selections.</i>
+      <br />
+      <i>
+        To remove an item from your cart, select it, and click Delete Item(s).
+      </i>
+      <br />
+      <i>
+        "Delete all items" will remove <strong>ALL</strong> items from your cart
+        (Not Recommended).
+      </i>
     </div>
   );
 };
