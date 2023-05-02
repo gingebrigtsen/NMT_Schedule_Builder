@@ -46,28 +46,31 @@ def index():
 # helper function
 # checking whether courses overlap to determine timeconflict status
 def time_overlap(time1, time2):
-    print('entered time_overlap\n') # DEBUG
-    start1, end1 = [int(x) for x in time1.split('-')]
-    start2, end2 = [int(x) for x in time2.split('-')]
+    # print('entered time_overlap\n') # DEBUG
+    start1, end1 = [int(x) for x in time1.split('-')] # get time1 start/end
+    start2, end2 = [int(x) for x in time2.split('-')] # get time2 start/end
+    # return boolean t/f if start/ends overlap
     return ((start1 >= start2 and start1 < end2) or (start2 >= start1 and start2 < end1))
 
 
 # helper function
 # checking time conflict using course data and time_overlap()
 def time_conflict(item, items):
-    print('entered time_conflict\n')  # DEBUG
+    # print('entered time_conflict\n')  # DEBUG
     for i in items:
         # skip comparing the same courses
         if i['CRN'] == item['CRN']:
             continue
+        
         # Ensure that both item['Days'] and i['Days'] are strings
         item_days = item['Days'] if type(item['Days']) == str else "".join(item['Days'])
         i_days = i['Days'] if type(i['Days']) == str else "".join(i['Days'])
 
         # Determine overlap flag
-        if set(item_days) & set(i_days):
-            if time_overlap(item['Time'], i['Time']):
-                return True
+        if set(item_days) & set(i_days): # if there are Days values
+            if any(day in item['Days'] for day in i['Days']): # if they have any of the same Days
+                if time_overlap(item['Time'], i['Time']): # if they overlap on that day
+                    return True
     return False
 
 
@@ -83,7 +86,6 @@ def init_usrCart():
 # clear the entire cart session variable
 @app.route('/api/clear_cart', methods=['POST'])
 def clear_cart():
-    print('manually clearing cart')# DEBUG
     # clear session var
     session['usrCart'] = []
 
@@ -114,8 +116,8 @@ def add_to_cart():
 
     # modification flag
     session['modified'] = True
-    print('Add to cart:\n', session['usrCart']) # DEBUG
-    print('addSID:\n', session.sid) # DEBUG
+    # print('Add to cart:\n', session['usrCart']) # DEBUG
+    # print('addSID:\n', session.sid) # DEBUG
     return {"message": "Items added to cart"}
 
 
@@ -138,8 +140,8 @@ def del_cart():
 
     # modification flag
     session['modified'] = True
-    print('deleted objects from cart:\n', session['usrCart']) # DEBUG
-    print('delSID:\n', session.sid) # DEBUG
+    # print('deleted objects from cart:\n', session['usrCart']) # DEBUG
+    # print('delSID:\n', session.sid) # DEBUG
     return {"message": "Items removed from cart"}
 
 
@@ -148,8 +150,8 @@ def del_cart():
 @app.route('/api/get_cart', methods=['GET', 'OPTIONS'])
 def get_cart():
     try:
-        print('usrCart:\n', session['usrCart']) # DEBUG
-        print('getSID:\n', session.sid) # DEBUG
+        # print('usrCart:\n', session['usrCart']) # DEBUG
+        # print('getSID:\n', session.sid) # DEBUG
         # Handle preflight requests
         if request.method == 'OPTIONS':
             response = make_response()
@@ -159,10 +161,10 @@ def get_cart():
             # Check if 'usrCart' is in the session
             if session.get('modified', None) == True:
                 # get items from session
-                print('realget\n') # DEBUG
+                # print('realget\n') # DEBUG
                 items = session.get('usrCart')
             else:
-                print('falseget\n') # DEBUG
+                # print('falseget\n') # DEBUG
                 items = []  # Set items to empty if no 'usrCart'
 
             # add fields for isSelected, cF, all set to false by default
@@ -173,7 +175,7 @@ def get_cart():
             
             # send to page
             response = make_response({"items": items})
-            print('get_cartResponse:\n', response.data) # DEBUG
+            # print('get_cartResponse:\n', response.data) # DEBUG
         return response
     except Exception as e:
         print(f'Error: {e}')
@@ -186,7 +188,7 @@ def get_cart():
 @app.route('/api/get_events', methods=['GET', 'OPTIONS'])
 def get_events():
     try:
-        print('entered get_events\n') # DEBUG
+        # print('entered get_events\n') # DEBUG
         # Handle preflight requests
         if request.method == 'OPTIONS':
             response = make_response()
@@ -196,7 +198,7 @@ def get_events():
             return response
         
         # get items from session
-        print('get_events:\n', session['usrCart']) # DEBUG
+        # print('get_events:\n', session['usrCart']) # DEBUG
         items = session.get('usrCart', [])
 
         # parse into fullcalendar format
@@ -233,6 +235,7 @@ def get_events():
 
         # send events to page
         response = make_response({"items": events})
+        print('get_eventsResponse:\n', response.data) # DEBUG
         return response
     except Exception as e:
         print(f'Error: {e}')
@@ -242,6 +245,7 @@ def get_events():
 
 # helper function for serve_query
 # parse, limit, sanitize text searches
+# removes dangerous chars from input strings
 def sanitize(text):
     allowed=re.compile()
     return allowed.sub("", text)
@@ -321,7 +325,10 @@ def serve_query():
             level_rexp = f'({level_rexp})([0-9]{{1,3}})'
             # print('lvlrxp:\n', level_rexp) # DEBUG
             # Filter the frame
-            df_filtered = df_filtered[df_filtered['Lvl'].str.match(level_rexp)]
+            if df_filtered.empty:
+                df_filtered = df_term[df_term['Lvl'].str.match(level_rexp)]
+            else:
+                df_filtered = df_filtered[df_filtered['Lvl'].str.match(level_rexp)]
             # print('level:\n', df_filtered) # DEBUG
 
             # remove temp dept and lvl columns

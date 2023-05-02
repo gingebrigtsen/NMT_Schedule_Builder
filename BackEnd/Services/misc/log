@@ -2854,3 +2854,1200 @@ KeyboardInterrupt
 127.0.0.1 - - [29/Apr/2023 16:20:58] "GET /api/get_cart HTTP/1.1" 200 -
 127.0.0.1 - - [29/Apr/2023 16:21:03] "GET /api/get_events HTTP/1.1" 200 -
 127.0.0.1 - - [29/Apr/2023 16:21:04] "GET /api/get_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [30/Apr/2023 19:30:15] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:30:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:30:48] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:14] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:14] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:16] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:28] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:29] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:37] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:31:51] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:33:10] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:35:09] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:36:49] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:36:57] "OPTIONS /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:36:57] "POST /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:00] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:22] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:22] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:33] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:33] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:35] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:40] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:37:40] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:42:52] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:43:51] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:43:52] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:24] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:27] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:27] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:30] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:51] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:57:51] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:13] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:13] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:14] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:22] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:22] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:30] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:30] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:58:31] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:59:06] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:59:07] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:59:25] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 19:59:38] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:04] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:26] "OPTIONS /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:26] "POST /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:32] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:32] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:00:42] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:03] "OPTIONS /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:03] "POST /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:06] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:07] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:22] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:24] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:01:24] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:02:29] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:03:42] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:03:43] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:03:49] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:03:49] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:04:15] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:04:15] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:15] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:40] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:40] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:50] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:50] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:05:52] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:06:14] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:06:16] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:06:16] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:06:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:06:49] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:07:01] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:07:01] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:07:22] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:07:23] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:07:23] "POST /api/clear_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [30/Apr/2023 20:34:13] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:34:13] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:07] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:07] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:12] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:12] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:37] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:38] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2023 20:43:38] "POST /api/clear_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/May/2023 18:01:23] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:01:58] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:01:59] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:02:08] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:02:08] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:02:09] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:02:17] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:02:18] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:03:39] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:03:40] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:03:40] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:03:52] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:03:59] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:00] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:09] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:09] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:10] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:21] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:04:21] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:00] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:00] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:02] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:09] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:09] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:18] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:05:45] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:10:28] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:11:16] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:11:16] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:11:21] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:11:36] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:11:36] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:05] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:05] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:06] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:13] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:13] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:29] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:12:36] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:13:03] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:14:11] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:16:41] "GET /api/get_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/May/2023 18:23:56] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:24:07] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:24:08] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:24:08] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:24:33] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:24:33] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:15] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:16] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:26] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:26] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:31] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:32] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:32] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:49] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:49] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:52] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:52] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:25:53] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:26:09] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:26:09] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:26:37] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:26:37] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:26:38] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:28:13] "GET /api/get_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/May/2023 18:37:00] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:11] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:18] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:21] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:21] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:40] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:37:41] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:38:00] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:38:01] "POST /api/serve_query HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/May/2023 18:42:47] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:42:48] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:42:48] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:42:57] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:42:57] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:43:33] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:43:33] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:03] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:04] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:04] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:10] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:10] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:11] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:23] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:23] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:45:25] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:46:56] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:46:57] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:46:57] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:05] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:06] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:11] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:11] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:27] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:27] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:47:45] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:35] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:36] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:36] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:48] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:48:54] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:18] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:19] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:26] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:26] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:27] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:49:32] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:50:50] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:50:52] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:50:52] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:51:13] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:51:14] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:51:23] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:51:24] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:51:24] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:22] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:23] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:23] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:25] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:41] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:41] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:45] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:45] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:54:46] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:32] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:35] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:36] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:48] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:48] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:55] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:55] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 18:55:57] "GET /api/get_cart HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+[2023-05-01 19:55:06,641] ERROR in app: Exception on /api/clear_cart [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 19:55:06,657] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 19:55:06] "[35m[1mOPTIONS /api/clear_cart HTTP/1.1[0m" 500 -
+[2023-05-01 19:56:26,364] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 19:56:26,365] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 19:56:26] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[2023-05-01 19:57:54,216] ERROR in app: Exception on /api/clear_cart [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 19:57:54,216] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 19:57:54] "[35m[1mOPTIONS /api/clear_cart HTTP/1.1[0m" 500 -
+[2023-05-01 19:58:06,160] ERROR in app: Exception on /api/clear_cart [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 19:58:06,160] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 19:58:06] "[35m[1mOPTIONS /api/clear_cart HTTP/1.1[0m" 500 -
+[2023-05-01 20:00:30,812] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:00:30,813] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:00:30] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:00:35,011] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:00:35,012] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:00:35] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:00:38,982] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:00:38,983] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:00:38] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:00:49,526] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:00:49,527] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:00:49] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[2023-05-01 20:00:52,131] ERROR in app: Exception on /api/clear_cart [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:00:52,132] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:00:52] "[35m[1mOPTIONS /api/clear_cart HTTP/1.1[0m" 500 -
+[2023-05-01 20:01:02,251] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:01:02,252] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:01:02] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:01:10,210] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:01:10,211] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:01:10] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:01:19,881] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:01:19,882] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:01:19] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[2023-05-01 20:01:21,273] ERROR in app: Exception on /api/clear_cart [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:01:21,273] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:01:21] "[35m[1mOPTIONS /api/clear_cart HTTP/1.1[0m" 500 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 391, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+[2023-05-01 20:02:11,881] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:02:11,882] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:02:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2023-05-01 20:02:12,145] ERROR in app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:02:12,145] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:02:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2023-05-01 20:02:52,281] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:02:52,282] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:02:52] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:03:09,996] ERROR in app: Exception on /api/get_cart [GET]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:03:09,996] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:03:09] "[35m[1mGET /api/get_cart HTTP/1.1[0m" 500 -
+[2023-05-01 20:03:18,889] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:03:18,890] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:03:18] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:03:24,522] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:03:24,523] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:03:24] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[2023-05-01 20:03:29,135] ERROR in app: Exception on /api/serve_query [OPTIONS]
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+[2023-05-01 20:03:29,136] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1826, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 1847, in finalize_request
+    response = self.process_response(response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask/app.py", line 2343, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 169, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "/home/st-n9177/.local/share/virtualenvs/BackEnd-P0Qa9w6s/lib/python3.8/site-packages/flask_session/sessions.py", line 34, in total_seconds
+    return td.days * 60 * 60 * 24 + td.seconds
+AttributeError: 'NoneType' object has no attribute 'days'
+127.0.0.1 - - [01/May/2023 20:03:29] "[35m[1mOPTIONS /api/serve_query HTTP/1.1[0m" 500 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [01/May/2023 20:04:22] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:04:22] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:09] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:10] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:11] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:21] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:21] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:23] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:31] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:31] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:32] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:41] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:05:41] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:09] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:14] "OPTIONS /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:15] "POST /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:20] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:20] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:39] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:41] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:41] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:48] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:06:48] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:26] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:26] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:33] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:34] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:34] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:41] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:41] "POST /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:48] "OPTIONS /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:48] "POST /api/add_to_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:49] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:56] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:08:56] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:09:31] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:09:35] "OPTIONS /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:09:35] "POST /api/del_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:09:39] "GET /api/get_events HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:09:39] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:10:05] "GET /api/get_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:10:06] "OPTIONS /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:10:06] "POST /api/clear_cart HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:10:16] "OPTIONS /api/serve_query HTTP/1.1" 200 -
+127.0.0.1 - - [01/May/2023 20:10:17] "POST /api/serve_query HTTP/1.1" 200 -
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/st-n9177/work/NMT_Schedule_Builder/BackEnd/app.py", line 391, in cleanup
+    thread.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt

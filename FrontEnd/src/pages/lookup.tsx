@@ -31,11 +31,6 @@ const head = {
 const title = {
   lineHeight: '1.75',
 };
-// vertical lines for better readability
-const vert = {
-  borderLeft: '1px solid #666666',
-  margin: 'auto 8px',
-};
 
 // --------
 
@@ -149,7 +144,7 @@ const Lookup: FunctionComponent = () => {
     if (resultsElement) {
       setTimeout(() => {
         resultsElement.scrollIntoView({ behavior: 'smooth' });
-      }, 1500);
+      }, 1000);
     } else {
       console.error('Failed to find element with id "resultElement"');
     }
@@ -207,13 +202,14 @@ const Lookup: FunctionComponent = () => {
         {/* Search option 1: selectables */}
         <EuiText>
           <h4 style={{ color: '#0079A5' }}>
-            Search Option 1 (Specify the Term, Subject, and Level) 
+            Search Option 1 (Specify the Term, and search for a Subject, and/or
+            Level)
             <strong>&#8628;</strong>
           </h4>
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween" style={{ height: 200 }}>
           {/* term selection */}
-          <EuiFlexItem style={vert}>
+          <EuiFlexItem >
             <EuiTitle size="xxs" style={title}>
               <span>Term</span>
             </EuiTitle>
@@ -226,7 +222,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* dept selection */}
-          <EuiFlexItem style={vert}>
+          <EuiFlexItem >
             <EuiTitle size="xxs" style={title}>
               <span>Subject / Program</span>
             </EuiTitle>
@@ -239,7 +235,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* level selection */}
-          <EuiFlexItem style={vert}>
+          <EuiFlexItem >
             <EuiTitle size="xxs" style={title}>
               <span>Course Level</span>
             </EuiTitle>
@@ -259,13 +255,14 @@ const Lookup: FunctionComponent = () => {
           <EuiFlexItem>
             <EuiText>
               <h4 style={{ color: '#0079A5' }}>
-                Search Option 2 (Specify the term, & Search for a phrase over all course listings)<strong>&#8594;</strong>
+                Search Option 2 (Specify the term, & Search for a phrase over
+                all course listings)<strong>&#8594;</strong>
               </h4>
             </EuiText>
           </EuiFlexItem>
 
           {/* term selection for option 2 */}
-          <EuiFlexItem style={vert}>
+          <EuiFlexItem >
             <EuiTitle size="xxs" style={title}>
               <span>Term</span>
             </EuiTitle>
@@ -278,7 +275,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* general global searching search */}
-          <EuiFlexItem style={vert}>
+          <EuiFlexItem >
             <EuiFieldSearch
               placeholder="Search for Anything..."
               aria-label="Search"

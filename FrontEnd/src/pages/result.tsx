@@ -37,7 +37,10 @@ const head = {
 const Result = ({ resultData }) => {
   // cart modal control
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const closeModal = () => setIsModalVisible(false);
+  const closeModal = (() => {
+    setIsModalVisible(false);
+    setSelectedItems([]);
+  });
 
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
@@ -63,7 +66,7 @@ const Result = ({ resultData }) => {
     setPageSize(pageSize);
     setSortField(sortField);
     setSortDirection(sortDirection);
-    setData(pageOfItems);
+    setData(data);
   };
 
   // Managing checkbox selecting, starting by setting all to false
@@ -118,7 +121,7 @@ const Result = ({ resultData }) => {
     // opening the cart modal after populating cart
     setTimeout(() => {
       setIsModalVisible(true);
-    }, 1500);
+    }, 1000);
   };
 
   // Sorting logic for displayed data

@@ -144,6 +144,10 @@ const Cart = () => {
       .catch(error => {
         console.error('Failed to fetch del_cart:', error);
       });
+
+    // clear displayed data now that cart is clear
+    setSelectedItems([]);
+    setData([]);
   };
 
   // Sorting logic for displayed data
@@ -225,7 +229,6 @@ const Cart = () => {
         </EuiToolTip>
       ),
       sortable: true,
-      truncateText: true,
     },
     {
       name: (
