@@ -1,5 +1,6 @@
 // Data and Imports
 import { FunctionComponent, useState, useEffect } from 'react';
+import { css } from '@emotion/react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -9,7 +10,6 @@ import {
   EuiText,
   EuiTitle,
   EuiButton,
-  EuiButtonEmpty,
   EuiModal,
   EuiModalHeader,
   EuiModalHeaderTitle,
@@ -23,17 +23,17 @@ import Wrapper from '../components/starter/wrapper';
 
 // custom defined element styles
 // bordered rounded tile
-const head = {
+const head = css`
   borderRadius: '25px',
   border: '1px solid #666666',
   padding: '5px',
   top: 'auto',
   bottom: 'auto',
-};
+`;
 // small bold title font
-const title = {
-  lineHeight: '1.75',
-};
+const title = css`
+  line-height: 1.75;
+`;
 
 // --------
 
@@ -51,7 +51,7 @@ const Calendar: FunctionComponent = () => {
         setData(response.items);
       });
   }, []);
-  
+
   // handling exporting CRNs to clipboard
   const handleClick = async () => {
     // Join the CRNs with whitespace separation for pasting into banweb
@@ -98,7 +98,7 @@ const Calendar: FunctionComponent = () => {
       <Wrapper>
         {/* Section I: Site Logo */}
         <EuiSpacer size="m" />
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiFlexItem>
             <EuiText>
               <h3>Your Term Calendar</h3>
@@ -114,7 +114,7 @@ const Calendar: FunctionComponent = () => {
               hasShadow={true}
               allowFullScreen
               alt="NMTLogo"
-              style={{ borderRadius: '25px' }}
+              css={{ borderRadius: '25px' }}
               url="/images/logo.jpg"
               caption="NMT"
             />
@@ -142,12 +142,12 @@ const Calendar: FunctionComponent = () => {
             Banweb to register
           </p>
           <p>
-            *Note: you'll need to refresh the page to update the calendar if you
-            make changes to your cart.
+            *Note: you&apos;ll need to refresh the page to update the calendar
+            if you make changes to your cart.
           </p>
         </EuiText>
         <EuiSpacer size="m" />
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiFlexItem>
             <Cal />
           </EuiFlexItem>
@@ -167,22 +167,21 @@ const Calendar: FunctionComponent = () => {
         <EuiFlexGroup>
           <EuiFlexItem></EuiFlexItem>
           <EuiFlexItem>
-            <EuiTitle size="xxs" style={title}>
+            <EuiTitle size="xs" css={title}>
               <span>Tentative Schedule:</span>
             </EuiTitle>
 
             {/* Calendar Export Modal */}
             <EuiButton
               href=""
-              size="xs"
+              size="s"
               color="primary"
               iconType="calendar"
-              htmlFor="calModal"
               onClick={() => setIsCalModalVisible(true)}>
               Export Calendar
             </EuiButton>
             {isCalModalVisible && (
-              <EuiModal style={head} onClose={closeCalModal} id="calModal">
+              <EuiModal css={head} onClose={closeCalModal} id="calModal">
                 <EuiModalHeader>
                   <EuiModalHeaderTitle>
                     Exporting your Calendar
@@ -192,8 +191,8 @@ const Calendar: FunctionComponent = () => {
                 <EuiModalBody>
                   <EuiText textAlign="center">
                     <h4>
-                      The best way to save your calendar for later
-                      is to take a screenshot/snip of it.
+                      The best way to save your calendar for later is to take a
+                      screenshot/snip of it.
                     </h4>
                   </EuiText>
                 </EuiModalBody>
@@ -211,22 +210,21 @@ const Calendar: FunctionComponent = () => {
             )}
           </EuiFlexItem>
           <EuiFlexItem>
-            <EuiTitle size="xxs" style={title}>
+            <EuiTitle size="xs" css={title}>
               <span>Banweb Registration:</span>
             </EuiTitle>
 
             {/* Banweb Export Modal */}
             <EuiButton
               href=""
-              size="xs"
+              size="s"
               color="primary"
               iconType="apmTrace"
-              htmlFor="banModal"
               onClick={() => setIsBanModalVisible(true)}>
               Export CRNs
             </EuiButton>
             {isBanModalVisible && (
-              <EuiModal style={head} onClose={closeBanModal} id="banModal">
+              <EuiModal css={head} onClose={closeBanModal} id="banModal">
                 <EuiModalHeader>
                   <EuiModalHeaderTitle>
                     Exporting your CRNs for Registration
@@ -240,10 +238,11 @@ const Calendar: FunctionComponent = () => {
                       Banweb to register for courses.
                     </h4>
                     <p>
-                      Find the fields to enter CRNs at "Student and Financial Aid" / "Registration" / "Add/Drop Classes"
+                      Find the fields to enter CRNs at Student and Financial Aid
+                      / Registration / Add/Drop Classes
                     </p>
                     <p>
-                      You can copy them directly, with the 'Copy to Clipboard'
+                      You can copy them directly, with the Copy to Clipboard
                       button below
                     </p>
                   </EuiText>

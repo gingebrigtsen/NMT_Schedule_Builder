@@ -58,8 +58,8 @@ const Report: FunctionComponent = () => {
               <h3>Noticed a glitch or a bug?</h3>
               <p>
                 Is something on the site causing issues? Please report your
-                problem using the form below, or if it's more urgent, get in
-                touch with the registrar's office{' '}
+                problem using the form below, or if it&apos;s more urgent, get
+                in touch with the registrar&apos;s office{' '}
                 <a href="https://www.nmt.edu/registrar/">here.</a>
               </p>
             </EuiText>
@@ -77,7 +77,7 @@ const Report: FunctionComponent = () => {
           </EuiFlexItem>
           <EuiFlexItem>
             <EuiText textAlign="right">
-              <h3>Let us know what's wrong</h3>
+              <h3>Let us know what&apos;s wrong</h3>
               <p>
                 We want to ensure this site is working so that users can always
                 access their schedule information
@@ -111,7 +111,7 @@ const Report: FunctionComponent = () => {
                 placeholder="user@example.com"
                 id="reportEmail"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>
@@ -120,7 +120,7 @@ const Report: FunctionComponent = () => {
           {/* large text entry field for the user's issue report */}
           <EuiDescribedFormGroup
             title={<h3>Report:</h3>}
-            description={<h5>What's wrong and how can we help?</h5>}>
+            description={<h5>What&apos;s wrong and how can we help?</h5>}>
             <EuiFormRow label="Message">
               <EuiTextArea
                 name="Message"
@@ -128,7 +128,7 @@ const Report: FunctionComponent = () => {
                 placeholder="Questions, Comments, Concerns?"
                 id="reportMessage"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={e => setMessage(e.target.value)}
               />
             </EuiFormRow>
           </EuiDescribedFormGroup>

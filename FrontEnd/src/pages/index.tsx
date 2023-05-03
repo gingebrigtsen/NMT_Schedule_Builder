@@ -1,5 +1,6 @@
 // Data and Imports
 import { FunctionComponent } from 'react';
+import { css } from '@emotion/react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -15,13 +16,13 @@ import Wrapper from '../components/starter/wrapper';
 
 // custom defined element styles
 // bordered rounded tile
-const head = {
+const head = css`
   borderRadius: '25px',
   border: '1px solid #666666',
   padding: '5px',
   top: 'auto',
   bottom: 'auto',
-};
+`;
 
 // --------
 
@@ -37,7 +38,7 @@ const Index: FunctionComponent = () => {
       <Wrapper>
         <EuiSpacer size="m" />
         {/* Section I: Site Logo, Branding, and page information */}
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiText>
             <h2>NMT Course Lookup & Schedule Planning</h2>
             <p>
@@ -56,7 +57,7 @@ const Index: FunctionComponent = () => {
               hasShadow={true}
               allowFullScreen
               alt="NMTLogo"
-              style={{ borderRadius: '25px' }}
+              css={{ borderRadius: '25px' }}
               url="/images/logo.jpg"
               caption="NMT"
             />
@@ -69,7 +70,7 @@ const Index: FunctionComponent = () => {
           <h2>Get started making your schedule now!</h2>
         </EuiText>
         <EuiSpacer size="s" />
-        <div style={head}>
+        <div>
           <EuiSpacer size="m" />
           <EuiText textAlign="center">
             <h4>
@@ -80,7 +81,7 @@ const Index: FunctionComponent = () => {
           <EuiSpacer size="m" />
           <EuiFlexGroup>
             <EuiFlexItem></EuiFlexItem>
-            <EuiFlexItem style={{ flexGrow: 0, flexShrink: 0, flexBasis: '50%' }}>
+            <EuiFlexItem css={{ flexGrow: 0, flexShrink: 0, flexBasis: '50%' }}>
               <ol style={{ listStyle: 'decimal', textAlign: 'center' }}>
                 <li>
                   Most degree programs provide a flowchart of courses needed
@@ -89,35 +90,35 @@ const Index: FunctionComponent = () => {
                 </li>
                 <EuiSpacer size="s" />
                 <li>
-                  Use the 'Course Lookup' page to find the courses you need, and
-                  electives you'd like to take. Then, add your courses to
+                  Use the Course Lookup page to find the courses you need, and
+                  electives you&apos;d like to take. Then, add your courses to
                   your cart using the checkboxes and button.
                 </li>
                 <EuiSpacer size="s" />
-                <EuiButton href="./lookup" size="xs" color="primary">
+                <EuiButton href="./lookup" size="s" color="primary">
                   Find Classes with Course Lookup
                 </EuiButton>
                 <EuiSpacer size="s" />
                 <li>
-                  The 'My Calendar' page, is generated from your Cart. Once
-                  you've selected your courses, you can view your schedule as a
-                  familiar weekly calendar, where you'll be easily able to
-                  identify issues like time conflicts.
+                  The My Calendar page, is generated from your Cart. Once
+                  you&apos;ve selected your courses, you can view your schedule
+                  as a familiar weekly calendar, where you&apos;ll be easily
+                  able to identify issues like time conflicts.
                 </li>
                 <EuiSpacer size="s" />
-                <EuiButton href="./calendar" size="xs" color="primary">
+                <EuiButton href="./calendar" size="s" color="primary">
                   Build Your Calendar
                 </EuiButton>
                 <EuiSpacer size="s" />
                 <li>
-                  When you're done, you can copy your selected CRNs to your
+                  When you&apos;re done, you can copy your selected CRNs to your
                   clipboard to register for classes using Banweb, or screenshot
                   your calendar to save it for later.
                 </li>
                 <EuiSpacer size="s" />
                 <EuiButton
                   href="https://banweb7.nmt.edu/pls/PROD/twbkwbis.P_ValLogin"
-                  size="xs"
+                  size="s"
                   color="primary">
                   Register on Banweb
                 </EuiButton>
@@ -137,13 +138,13 @@ const Index: FunctionComponent = () => {
             To find information about departments and degree programs.
           </h4>
           <h4>
-            Or check the registrar's website{' '}
+            Or check the registrar&apos;s website{' '}
             <EuiLink href="https://www.nmt.edu/registrar/">here </EuiLink>
             for supplementary information about registration.
           </h4>
           <i>
-            Note: this site <strong>cannot</strong> be used to register,
-            you still have to use Banweb
+            Note: this site <strong>cannot</strong> be used to register, you
+            still have to use Banweb
           </i>
         </EuiText>
       </Wrapper>

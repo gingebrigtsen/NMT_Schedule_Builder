@@ -1,15 +1,16 @@
-import { FunctionComponent } from 'react';
-
+import { ReactNode, FunctionComponent } from 'react';
 import { EuiProvider, EuiThemeColorMode } from '@elastic/eui';
-
 import { useTheme } from '../theme';
-
 import createCache from '@emotion/cache';
 
 /**
  * Renders the UI that surrounds the page content.
  */
-const Chrome: FunctionComponent = ({ children }) => {
+interface ChromeProps {
+  children: ReactNode;
+}
+
+const Chrome: FunctionComponent<ChromeProps> = ({ children }) => {
   const { colorMode } = useTheme();
 
   /**

@@ -1,9 +1,13 @@
-import { FunctionComponent } from 'react';
+import { ReactNode, FunctionComponent } from 'react';
 import { useEuiTheme, transparentize } from '@elastic/eui';
 import { useTheme } from '../theme';
 import { gradientBgStyles } from './gradient_bg.styles';
 
-const GradientBg: FunctionComponent = ({ children }) => {
+interface GradientProps {
+  children: ReactNode;
+}
+
+const GradientBg: FunctionComponent<GradientProps> = ({ children }) => {
   const { euiTheme } = useEuiTheme();
   const { colorMode } = useTheme();
 

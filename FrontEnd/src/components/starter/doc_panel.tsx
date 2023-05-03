@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { ReactNode, FunctionComponent } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { EuiPanel, useEuiTheme } from '@elastic/eui';
@@ -9,7 +9,11 @@ import Pattern1 from '../../../public/images/patterns/pattern-1.svg';
 import Pattern2Light from '../../../public/images/patterns/pattern-2-light.svg';
 import Pattern2Dark from '../../../public/images/patterns/pattern-2-dark.svg';
 
-const DocPanel: FunctionComponent = ({ children }) => {
+interface DocProps {
+  children: ReactNode;
+}
+
+const DocPanel: FunctionComponent<DocProps> = ({ children }) => {
   const { euiTheme } = useEuiTheme();
   const { colorMode } = useTheme();
 

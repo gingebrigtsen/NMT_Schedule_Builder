@@ -1,6 +1,7 @@
 // Data and Imports
 import React, { useEffect, useState } from 'react';
 import {
+  CriteriaWithPagination,
   EuiBasicTable,
   EuiCheckbox,
   EuiToolTip,
@@ -25,6 +26,15 @@ const rowStyle = item => {
 
 // --------
 
+interface TableItem {
+  CRN: number;
+  Course: string;
+  '*Campus': string;
+  Days: string;
+  Time: string;
+  Location: string;
+}
+
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Cart = () => {
@@ -34,13 +44,13 @@ const Cart = () => {
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
   const [pageSize, setPageSize] = useState(5);
-  const [sortField, setSortField] = useState('Title');
-  const [sortDirection, setSortDirection] = useState('asc');
-  const [pageOfItems, setPageOfItems] = useState([]);
+  const [sortField, setSortField] = useState<keyof TableItem>('CRN');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [pageOfItems, setPageOfItems] = useState<TableItem[]>([]);
   const [selectedItems, setSelectedItems] = useState([]);
 
   // fetching usrCart session variable to display data
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<TableItem[]>([]);
   useEffect(() => {
     fetch('http://localhost:5000/api/get_cart', {
       credentials: 'include',
@@ -62,16 +72,21 @@ const Cart = () => {
       .catch(error => {
         console.error('Failed to fetch from get_cart:', error);
       });
-  }, []);
+  }, [data]);
 
   // Updating table on change
-  const onTableChange = ({ page = {}, sort = {} }) => {
-    const { index: pageIndex, size: pageSize } = page;
-    const { field: sortField, direction: sortDirection } = sort;
-    setPageIndex(pageIndex);
-    setPageSize(pageSize);
-    setSortField(sortField);
-    setSortDirection(sortDirection);
+  const onTableChange = ({
+    page = { index: pageIndex, size: pageSize },
+    sort = { field: sortField, direction: sortDirection },
+  }: CriteriaWithPagination<TableItem>) => {
+    const { index: newPageIndex, size: newPageSize } = page;
+    const { field: newSortField, direction: newSortDirection } = sort;
+
+    setPageIndex(newPageIndex);
+    setPageSize(newPageSize);
+
+    setSortField(newSortField);
+    setSortDirection(newSortDirection);
   };
 
   // Managing checkbox selecting, starting by setting all to false
@@ -153,8 +168,8 @@ const Cart = () => {
   // Sorting logic for displayed data
   useEffect(() => {
     console.log('Triggered');
-    let sortedArr = data.sort((x, y) => {
-      var comp = x[sortField] < y[sortField];
+    const sortedArr = data.sort((x, y) => {
+      const comp = x[sortField] < y[sortField];
       if (sortDirection == 'desc') {
         return comp ? 1 : -1;
       } else {
@@ -189,7 +204,6 @@ const Cart = () => {
         </EuiToolTip>
       ),
       sortable: true,
-      truncateText: true,
     },
     {
       field: '*Campus',
@@ -302,7 +316,7 @@ const Cart = () => {
       </i>
       <br />
       <i>
-        "Delete all items" will remove <strong>ALL</strong> items from your cart
+        Delete all items will remove <strong>ALL</strong> items from your cart
         (Not Recommended).
       </i>
     </div>

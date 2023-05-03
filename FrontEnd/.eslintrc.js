@@ -51,6 +51,8 @@ module.exports = {
 
     'prefer-object-spread': 'error',
 
+    'react/no-unknown-property': ['error', { 'ignore': ['css'] }],
+
     // Use template strings instead of string concatenation
     'prefer-template': 'error',
 

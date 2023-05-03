@@ -1,5 +1,6 @@
 // Data and Imports
 import { FunctionComponent } from 'react';
+import { css } from '@emotion/react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -16,17 +17,17 @@ import Wrapper from '../components/starter/wrapper';
 
 // custom defined element styles
 // bordered rounded tile
-const head = {
+const head = css`
   borderRadius: '25px',
   border: '1px solid #666666',
   padding: '5px',
   top: 'auto',
   bottom: 'auto',
-};
+`;
 // small bold title font
-const title = {
-  lineHeight: '1.75',
-};
+const title = css`
+  line-height: 1.75;
+`;
 
 // --------
 
@@ -42,13 +43,13 @@ const About: FunctionComponent = () => {
       <Wrapper>
         {/* Section I: Site Logo, Branding, and page information */}
         <EuiSpacer size="s" />
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiFlexItem>
             <EuiText>
               <h3>About the Schedule Builder</h3>
               <p>
                 Created as a project for IT Senior Design (482) on behalf of the
-                NMT Registrar's Office
+                NMT Registrar&apos;s Office
               </p>
             </EuiText>
           </EuiFlexItem>
@@ -58,7 +59,7 @@ const About: FunctionComponent = () => {
               hasShadow={true}
               allowFullScreen
               alt="NMTLogo"
-              style={{ borderRadius: '25px' }}
+              css={{ borderRadius: '25px' }}
               url="/images/logo.jpg"
               caption="NMT"
             />
@@ -134,8 +135,8 @@ const About: FunctionComponent = () => {
                   mobile
                 </li>
                 <li>
-                  Beanweb works but doesn't have all course information, and
-                  isn't updated regularly enough
+                  Beanweb works but doesn&apos;t have all course information,
+                  and isn&apos;t updated regularly enough
                 </li>
               </ul>
             </EuiText>
@@ -158,8 +159,8 @@ const About: FunctionComponent = () => {
               </li>
               <li>26.2% said it needs better readability and formatting</li>
               <li>
-                This platform's aim is to directly address both issues with an
-                easy to use and navigate, modern scheduler
+                This platform&apos;s aim is to directly address both issues with
+                an easy to use and navigate, modern scheduler
               </li>
             </ul>
           </EuiFlexItem>
@@ -181,7 +182,7 @@ const About: FunctionComponent = () => {
         <EuiSpacer size="m" />
 
         {/* Section IV: Useful Links and misc */}
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiFlexItem>
             <EuiText textAlign="center">
               <h3>Some Useful Links for You:</h3>
@@ -191,7 +192,7 @@ const About: FunctionComponent = () => {
                   <a href="https://banweb7.nmt.edu/pls/PROD/twbkwbis.P_ValLogin">
                     <EuiIcon type="documents" size="xl" />
                     <br />
-                    <EuiTitle size="xxs" style={title}>
+                    <EuiTitle size="xs" css={title}>
                       <span>Banweb</span>
                     </EuiTitle>
                   </a>
@@ -201,7 +202,7 @@ const About: FunctionComponent = () => {
                   <a href="https://www.nmt.edu">
                     <EuiIcon type="namespace" size="xl" />
                     <br />
-                    <EuiTitle size="xxs" style={title}>
+                    <EuiTitle size="xs" css={title}>
                       <span>NMT</span>
                     </EuiTitle>
                   </a>
@@ -211,7 +212,7 @@ const About: FunctionComponent = () => {
                   <a href="https://www.nmt.edu/registrar/">
                     <EuiIcon type="paperClip" size="xl" />
                     <br />
-                    <EuiTitle size="xxs" style={title}>
+                    <EuiTitle size="xs" css={title}>
                       <span>Registrar</span>
                     </EuiTitle>
                   </a>
@@ -221,7 +222,7 @@ const About: FunctionComponent = () => {
                   <a href="https://dwapp-ext.id.nmt.edu:9901/">
                     <EuiIcon type="visLine" size="xl" />
                     <br />
-                    <EuiTitle size="xxs" style={title}>
+                    <EuiTitle size="xs" css={title}>
                       <span>Degree Audit</span>
                     </EuiTitle>
                   </a>
@@ -235,7 +236,7 @@ const About: FunctionComponent = () => {
             <EuiText textAlign="center">
               <h3>Need more information?</h3>
               <p>
-                Feel free to contact the registrar's office{' '}
+                Feel free to contact the registrar&apos;s office{' '}
                 <a href="mailto:registrar@nmt.edu">
                   here
                   <br />

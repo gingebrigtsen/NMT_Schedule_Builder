@@ -4,8 +4,15 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import styled from '@emotion/styled';
 
 // --------
+
+// defining scope for fullcalendar style
+const FullCalendarContainer = styled.div`
+  height: auto;
+  padding: 10px;
+`;
 
 // configuring the plugins and settings for the calendar element
 const options = {
@@ -29,9 +36,8 @@ const options = {
   // events: events,
   eventBackgroundColor: '#555555',
   eventBorderColor: '#333333',
-  eventMargin: 25,
   slotEventOverlap: false,
-  slotLabelFormat: { hour: 'numeric', minute: '2-digit' },
+  slotLabelFormat: { hour: 'numeric' as const, minute: '2-digit' as const },
   slotDuration: '00:30:00',
   weekNumbers: false,
   views: {
@@ -41,7 +47,7 @@ const options = {
       slotMaxTime: '22:00:00',
     },
   },
-  dayHeaderFormat: { weekday: 'short' },
+  dayHeaderFormat: { weekday: 'short' as const },
 };
 
 // --------
@@ -62,9 +68,9 @@ const Cal = () => {
   }, []);
 
   return (
-    <div style={{ height: 'auto', padding: '10px' }}>
+    <FullCalendarContainer>
       <FullCalendar height={768} {...options} events={data} />
-    </div>
+    </FullCalendarContainer>
   );
 };
 

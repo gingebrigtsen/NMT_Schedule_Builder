@@ -10,7 +10,6 @@ import {
 } from '@elastic/eui';
 import Wrapper from '../components/starter/wrapper';
 
-
 // --------
 
 // custom defined element styles
@@ -63,7 +62,7 @@ const Help: FunctionComponent = () => {
             <EuiText textAlign="right">
               <h3>Still struggling?</h3>
               <p>
-                Contact the registrar's office{' '}
+                Contact the registrar&apos;s office{' '}
                 <a href="mailto:registrar@nmt.edu">
                   here
                   <br />
@@ -121,8 +120,9 @@ const Help: FunctionComponent = () => {
               <ul>
                 <i>Do I need an account?</i>
                 <li>
-                  No. To keep things simple and secure, this external app won't
-                  collect any personal information or require user accounts.
+                  No. To keep things simple and secure, this external app
+                  won&apos;t collect any personal information or require user
+                  accounts.
                 </li>
                 <i>How do I search for courses on the website?</i>
                 <li>
@@ -145,13 +145,13 @@ const Help: FunctionComponent = () => {
                   updated annually as the school releases them.
                 </li>
                 <i>
-                  What should I do if I can't find a particular course on the
-                  website?
+                  What should I do if I can&apos;t find a particular course on
+                  the website?
                 </i>
                 <li>
-                  If you can't find what you're looking for in the lookup,
-                  please get in touch with the registrar's office, or try the
-                  Banweb course offerings search, available{' '}
+                  If you can&apos;t find what you&apos;re looking for in the
+                  lookup, please get in touch with the registrar&apos;s office,
+                  or try the Banweb course offerings search, available{' '}
                   <a href="https://banweb7.nmt.edu/pls/PROD/hwzkcrof.p_uncgslctcrsoff">
                     here.
                   </a>
@@ -161,7 +161,7 @@ const Help: FunctionComponent = () => {
                   website?
                 </i>
                 <li>
-                  Yes, there's a form for reporting issues, it can be found{' '}
+                  Yes, there&apos;s a form for reporting issues, it can be found{' '}
                   <a href="./report">here.</a>
                 </li>
               </ul>

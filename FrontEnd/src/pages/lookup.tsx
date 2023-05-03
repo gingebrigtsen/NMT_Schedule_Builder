@@ -1,5 +1,6 @@
 // Data and Imports
 import React, { FunctionComponent, useState, useEffect } from 'react';
+import { css } from '@emotion/react';
 import Head from 'next/head';
 import {
   EuiSpacer,
@@ -20,17 +21,17 @@ import Result from './result';
 
 // custom defined element styles
 // bordered rounded tile
-const head = {
+const head = css`
   borderRadius: '25px',
   border: '1px solid #666666',
   padding: '5px',
   top: 'auto',
   bottom: 'auto',
-};
+`;
 // small bold title font
-const title = {
-  lineHeight: '1.75',
-};
+const title = css`
+  line-height: 1.75;
+`;
 
 // --------
 
@@ -89,7 +90,7 @@ const Lookup: FunctionComponent = () => {
         }));
         setSubjects(newSubjects);
       } catch (error) {
-        console.error("Error fetching conf.json data:", error);
+        console.error('Error fetching conf.json data:', error);
       }
     };
 
@@ -160,7 +161,7 @@ const Lookup: FunctionComponent = () => {
       <Wrapper>
         <EuiSpacer size="l" />
         {/* Section I: Site Logo, Branding, and page information */}
-        <EuiFlexGroup style={head}>
+        <EuiFlexGroup css={head}>
           <EuiFlexItem>
             <EuiText>
               <h3>NMT Course Lookup</h3>
@@ -176,7 +177,7 @@ const Lookup: FunctionComponent = () => {
               hasShadow={true}
               allowFullScreen
               alt="NMTLogo"
-              style={{ borderRadius: '25px' }}
+              css={{ borderRadius: '25px' }}
               url="/images/logo.jpg"
               caption="NMT"
             />
@@ -207,10 +208,10 @@ const Lookup: FunctionComponent = () => {
             <strong>&#8628;</strong>
           </h4>
         </EuiText>
-        <EuiFlexGroup justifyContent="spaceBetween" style={{ height: 200 }}>
+        <EuiFlexGroup justifyContent="spaceBetween" css={{ height: 200 }}>
           {/* term selection */}
-          <EuiFlexItem >
-            <EuiTitle size="xxs" style={title}>
+          <EuiFlexItem>
+            <EuiTitle size="xs" css={title}>
               <span>Term</span>
             </EuiTitle>
             <EuiSelectable
@@ -222,8 +223,8 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* dept selection */}
-          <EuiFlexItem >
-            <EuiTitle size="xxs" style={title}>
+          <EuiFlexItem>
+            <EuiTitle size="xs" css={title}>
               <span>Subject / Program</span>
             </EuiTitle>
             <EuiSelectable
@@ -235,8 +236,8 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* level selection */}
-          <EuiFlexItem >
-            <EuiTitle size="xxs" style={title}>
+          <EuiFlexItem>
+            <EuiTitle size="xs" css={title}>
               <span>Course Level</span>
             </EuiTitle>
             <EuiSelectable
@@ -262,8 +263,8 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* term selection for option 2 */}
-          <EuiFlexItem >
-            <EuiTitle size="xxs" style={title}>
+          <EuiFlexItem>
+            <EuiTitle size="xs" css={title}>
               <span>Term</span>
             </EuiTitle>
             <EuiSelectable
@@ -275,7 +276,7 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
 
           {/* general global searching search */}
-          <EuiFlexItem >
+          <EuiFlexItem>
             <EuiFieldSearch
               placeholder="Search for Anything..."
               aria-label="Search"
@@ -314,7 +315,8 @@ const Lookup: FunctionComponent = () => {
         </EuiText>
         <EuiText>
           <h4 style={{ color: '#0079A5' }}>
-            Select your chosen courses using the checkboxes<strong>&#8594;</strong>
+            Select your chosen courses using the checkboxes
+            <strong>&#8594;</strong>
           </h4>
         </EuiText>
         <EuiFlexGroup justifyContent="spaceBetween">

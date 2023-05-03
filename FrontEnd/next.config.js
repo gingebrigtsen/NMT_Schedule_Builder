@@ -4,6 +4,12 @@ const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 const iniparser = require('iniparser');
+const withTM = require('next-transpile-modules')([
+  '@fullcalendar/react',
+  '@fullcalendar/daygrid',
+  '@fullcalendar/timegrid',
+  '@fullcalendar/interaction',
+]);
 
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -27,6 +33,9 @@ const nextConfig = {
   },
   /** Disable the `X-Powered-By: Next.js` response header. */
   poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  output: 'export',
 
   /**
    * When set to something other than '', this field instructs Next to
@@ -107,6 +116,13 @@ const nextConfig = {
 
     config.resolve.mainFields = ['module', 'main'];
 
+    config.optimization.splitChunks.cacheGroups = {
+      common: {
+        name: 'common',
+        chunks: 'all',
+      },
+    };
+
     return config;
   },
 };
@@ -117,9 +133,7 @@ const nextConfig = {
  * - Load images from JavaScript.
  * - Load SCSS files from JavaScript.
  */
-module.exports = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-})(nextConfig);
+module.exports = withTM(nextConfig);
 
 /**
  * Find all EUI themes and construct a theme configuration object.

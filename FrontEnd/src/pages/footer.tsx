@@ -16,17 +16,17 @@ const Footer: FunctionComponent = () => {
   return (
     <>
       <EuiBottomBar>
-        <EuiFlexGroup justify="spaceBetween" alignItems="center">
+        <EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
           <EuiFlexItem grow={false}>
             {/* left side of the footer */}
             <EuiText size="s" color="subdued">
-              Built for the students of NMT by the Registrar's Office & IT Dept
+              Built for the students of NMT by the Registrar&apos;s Office & IT
+              Dept
             </EuiText>
           </EuiFlexItem>
 
           {/* Central Spacer, open space for rights info, logo, etc */}
           <EuiFlexItem></EuiFlexItem>
-
 
           <EuiFlexItem grow={false}>
             {/* right side of the footer */}
@@ -34,7 +34,7 @@ const Footer: FunctionComponent = () => {
               Report an Issue
             </EuiLink>
             <EuiLink href="https://www.nmt.edu" target="_blank" rel="noopener">
-              Visit NMT's website
+              Visit NMT&apos;s website
             </EuiLink>
             <EuiLink
               href="https://banweb7.nmt.edu/pls/PROD/twbkwbis.P_ValLogin"

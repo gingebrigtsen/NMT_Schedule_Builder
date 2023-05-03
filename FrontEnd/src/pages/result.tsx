@@ -1,6 +1,7 @@
 // Data and Imports
 import { useEffect, useState } from 'react';
 import {
+  CriteriaWithPagination,
   EuiBasicTable,
   EuiCheckbox,
   EuiToolTip,
@@ -32,25 +33,40 @@ const head = {
 
 // --------
 
+interface TableItem {
+  CRN: number;
+  Title: string;
+  Course: string;
+  Instructor: string;
+  Days: string;
+  Time: string;
+  Location: string;
+  Occupancy: string;
+  Enroll: number;
+  Seats: number;
+  Waitlist: number;
+  Catalog: string;
+}
+
 // building the page's actual composition and styling
 // by returning a React component containing mostly EUI html
 const Result = ({ resultData }) => {
   // cart modal control
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const closeModal = (() => {
+  const closeModal = () => {
     setIsModalVisible(false);
     setSelectedItems([]);
-  });
+  };
 
   // indexing, sorting, selecting items Settings
   const [pageIndex, setPageIndex] = useState(0);
   const [pageSize, setPageSize] = useState(10);
-  const [sortField, setSortField] = useState('Title');
-  const [sortDirection, setSortDirection] = useState('asc');
+  const [sortField, setSortField] = useState<keyof TableItem>('Title');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
   const [selectedItems, setSelectedItems] = useState([]);
 
   // getting data from parent component
-  const [data, setData] = useState(resultData);
+  const [data, setData] = useState(resultData || []);
   // keeping data updated
   useEffect(() => {
     setData(resultData);
@@ -59,14 +75,18 @@ const Result = ({ resultData }) => {
   const [pageOfItems, setPageOfItems] = useState(data);
 
   // handle table changes
-  const onTableChange = ({ page = {}, sort = {} }) => {
-    const { index: pageIndex, size: pageSize } = page;
-    const { field: sortField, direction: sortDirection } = sort;
-    setPageIndex(pageIndex);
-    setPageSize(pageSize);
-    setSortField(sortField);
-    setSortDirection(sortDirection);
-    setData(data);
+  const onTableChange = ({
+    page = { index: pageIndex, size: pageSize },
+    sort = { field: sortField, direction: sortDirection },
+  }: CriteriaWithPagination<TableItem>) => {
+    const { index: newPageIndex, size: newPageSize } = page;
+    const { field: newSortField, direction: newSortDirection } = sort;
+
+    setPageIndex(newPageIndex);
+    setPageSize(newPageSize);
+
+    setSortField(newSortField);
+    setSortDirection(newSortDirection);
   };
 
   // Managing checkbox selecting, starting by setting all to false
@@ -127,8 +147,8 @@ const Result = ({ resultData }) => {
   // Sorting logic for displayed data
   useEffect(() => {
     console.log('Triggered');
-    let sortedArr = data.sort((x, y) => {
-      var comp = x[sortField] < y[sortField];
+    const sortedArr = data.sort((x, y) => {
+      const comp = x[sortField] < y[sortField];
       if (sortDirection == 'desc') {
         return comp ? 1 : -1;
       } else {
@@ -173,7 +193,6 @@ const Result = ({ resultData }) => {
         </EuiToolTip>
       ),
       sortable: true,
-      truncateText: true,
     },
     {
       field: 'Instructor',

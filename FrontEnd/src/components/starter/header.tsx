@@ -9,7 +9,6 @@ import {
   EuiHeaderLink,
   EuiSpacer,
   EuiButton,
-  EuiButtonEmpty,
   EuiModal,
   EuiModalHeader,
   EuiModalHeaderTitle,
