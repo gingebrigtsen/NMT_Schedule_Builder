@@ -17,7 +17,7 @@ from Services import requestService
 
 # Backend Config
 app = Flask(__name__)
-app.config["DEBUG"] = True
+app.config["DEBUG"] = False # T=dev F=prof
 
 # Session Config
 app.config['SECRET_KEY'] = '515723' # Use a random and secure key
@@ -68,9 +68,8 @@ def time_conflict(item, items):
 
         # Determine overlap flag
         if set(item_days) & set(i_days): # if there are Days values
-            if any(day in item['Days'] for day in i['Days']): # if they have any of the same Days
-                if time_overlap(item['Time'], i['Time']): # if they overlap on that day
-                    return True
+            if any(day in item['Days'] for day in i['Days'].replace(' ','')) and time_overlap(item['Time'], i['Time']): # if they overlap on the same day
+                return True
     return False
 
 
@@ -203,6 +202,7 @@ def get_events():
 
         # parse into fullcalendar format
         events = []
+        reference_date = datetime.now().date() - timedelta(days=datetime.now().date().weekday())
         for item in items:
             # parse days
             dayMap = {'M': 0, 'T': 1, 'W': 2, 'R': 3, 'F': 4}
@@ -215,7 +215,7 @@ def get_events():
 
             # generate separate events for each day in days
             for day in days:
-                startD = datetime.now().date() + timedelta(days=(dayMap[day] - datetime.now().weekday()) % 7)
+                startD = reference_date + timedelta(days=dayMap[day])
                 start = datetime.combine(startD, startT.time())
                 end = datetime.combine(startD, endT.time())
 
@@ -235,7 +235,7 @@ def get_events():
 
         # send events to page
         response = make_response({"items": events})
-        print('get_eventsResponse:\n', response.data) # DEBUG
+        # print('get_eventsResponse:\n', response.data) # DEBUG
         return response
     except Exception as e:
         print(f'Error: {e}')
@@ -247,7 +247,7 @@ def get_events():
 # parse, limit, sanitize text searches
 # removes dangerous chars from input strings
 def sanitize(text):
-    allowed=re.compile()
+    allowed=re.compile(r'[^a-zA-Z0-9\s]')
     return allowed.sub("", text)
 
 
@@ -358,19 +358,8 @@ def serve_query():
 hasScraped = False
 
 
-# Every 24 hours, check current date against public Banweb
-# Doesn't require input parameters
-# No returns
-def checkDate(force=False):
-    global hasScraped 
-    while True:
-        if not force or hasScraped:
-            time.sleep(24*60*60)
-        requestService.dateCheck()
-        hasScraped = True
-
-
-# # Every 24 hours, update Banweb Data CSVs
+# # Every 24 hours, check banweb if new terms&subjects are available
+# # then update Banweb Data CSVs
 # # Doesn't require input parameters
 # # No returns
 def updateBanweb(force=False):
@@ -378,6 +367,7 @@ def updateBanweb(force=False):
     while True:
         if not force or hasScraped:
             time.sleep(24*60*60)
+        requestService.dateCheck()
         CollectData.collectData()
         hasScraped = True
 
@@ -395,7 +385,5 @@ atexit.register(cleanup) # only cleanup threads on shutdown
 # ---------------- Flask Boilerplating
 if __name__ == "__main__":
     app.run(debug=True, host='localhost', port=5000)
-    dT=threading.Thread(target=checkDate, args=(True,))
-    #dT.start()
     uT=threading.Thread(target=updateBanweb, args=(True,))
-    #uT.start()
+    uT.start()

@@ -4,6 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+flask = "*"
+flask-session = "*"
+flask-cors = "*"
+pandas = "*"
+redis = "*"
+beautifulsoup4 = "*"
+gunicorn = "*"
 
 [dev-packages]
 

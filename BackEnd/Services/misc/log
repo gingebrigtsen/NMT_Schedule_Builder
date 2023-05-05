@@ -7026,3 +7026,7 @@ KeyboardInterrupt
 127.0.0.1 - - [03/May/2023 15:50:14] "GET /api/get_cart HTTP/1.1" 200 -
 127.0.0.1 - - [03/May/2023 15:50:14] "GET /api/get_cart HTTP/1.1" 200 -
 127.0.0.1 - - [03/May/2023 15:50:15] "GET /api/get_cart HTTP/1.1" 200 -
+'FLASK_ENV' is deprecated and will not be used in Flask 2.3. Use 'FLASK_DEBUG' instead.
+'FLASK_ENV' is deprecated and will not be used in Flask 2.3. Use 'FLASK_DEBUG' instead.
+'FLASK_ENV' is deprecated and will not be used in Flask 2.3. Use 'FLASK_DEBUG' instead.
+'FLASK_ENV' is deprecated and will not be used in Flask 2.3. Use 'FLASK_DEBUG' instead.
