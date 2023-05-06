@@ -43,6 +43,7 @@ const Lookup: FunctionComponent = () => {
   // The available options for NMT terms
   // uses React useState to control selected options
   const [terms, setTerms] = useState<EuiSelectableOption[]>([]);
+  const [selectedTerm, setSelectedTerm] = useState('');
 
   // The available options for course subjects
   // uses React useState to control selected options
@@ -217,7 +218,11 @@ const Lookup: FunctionComponent = () => {
             <EuiSelectable
               aria-label="termSelection"
               options={terms}
-              onChange={newTerms => setTerms(newTerms)}>
+              onChange={newTerms => {
+                setTerms(newTerms);
+                const term = newTerms.find(option => option.checked);
+                setSelectedTerm(term ? term.label : '');
+              }}>
               {list => <>{list}</>}
             </EuiSelectable>
           </EuiFlexItem>
@@ -249,6 +254,30 @@ const Lookup: FunctionComponent = () => {
           </EuiFlexItem>
         </EuiFlexGroup>
 
+        {/* submit lookup form */}
+        <EuiHorizontalRule margin="s" size="half" />
+        <EuiSpacer size="m" />
+        <EuiFlexGroup justifyContent="spaceBetween">
+          <EuiFlexItem>
+            <EuiText>
+              <h4 style={{ color: '#0079A5' }}>
+                Click search to get your results<strong>&#8594;</strong>
+              </h4>
+            </EuiText>
+          </EuiFlexItem>
+          <EuiFlexItem>
+            <EuiButton
+              size="s"
+              color="primary"
+              iconType="search"
+              onClick={handleSearchSubmit}>
+              Search
+            </EuiButton>
+          </EuiFlexItem>
+          <EuiFlexItem></EuiFlexItem>
+        </EuiFlexGroup>
+        <EuiHorizontalRule margin="s" size="half" />
+
         {/* Search Option 2: term + general search */}
         <EuiSpacer size="m" />
         <EuiHorizontalRule margin="s" size="half" />
@@ -270,7 +299,11 @@ const Lookup: FunctionComponent = () => {
             <EuiSelectable
               aria-label="termSelection"
               options={terms}
-              onChange={newTerms => setTerms(newTerms)}>
+              onChange={newTerms => {
+                setTerms(newTerms);
+                const term = newTerms.find(option => option.checked);
+                setSelectedTerm(term ? term.label : '');
+              }}>
               {list => <>{list}</>}
             </EuiSelectable>
           </EuiFlexItem>
@@ -278,7 +311,7 @@ const Lookup: FunctionComponent = () => {
           {/* general global searching search */}
           <EuiFlexItem>
             <EuiFieldSearch
-              placeholder="Search for Anything..."
+              placeholder="Search for any string on Banweb..."
               aria-label="Search"
               onChange={handleSearchChange}
             />
@@ -311,7 +344,7 @@ const Lookup: FunctionComponent = () => {
 
         {/* Section III: Search results table */}
         <EuiText textAlign="center">
-          <h3>Your Results:</h3>
+          <h3>Your {selectedTerm ? `${selectedTerm} ` : ''}Results:</h3>
         </EuiText>
         <EuiText>
           <h4 style={{ color: '#0079A5' }}>

@@ -309,7 +309,9 @@ const Cart = () => {
         Delete all items
       </EuiButton>
       <br />
-      <i>Red entries indicate a time conflict among your selections.</i>
+      <i>
+        Red entries indicate a time conflict or overlap among your selections.
+      </i>
       <br />
       <i>
         To remove an item from your cart, select it, and click Delete Item(s).

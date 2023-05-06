@@ -284,12 +284,12 @@ def serve_query():
             # drop NaNs
             df_term = df_term.drop(['Float'], axis=1)
 
-            # extracting entries matching user text query 
+            # extracting entries matching user text query
             # from data, adding to results
             query = data['query'].strip()[:32]
-            query = sanitize(query)
-            df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.contains(query).any(), axis=1)]
-            print('query:\n', df_filtered) # DEBUG
+            query = sanitize(query).lower()
+            df_filtered = df_term[df_term.apply(lambda row: row.astype(str).str.lower().str.contains(query).any(), axis=1)]
+            # print('query:\n', df_filtered) # DEBUG
 
             # add filtered data to search results
             results += df_filtered.to_dict('records')
